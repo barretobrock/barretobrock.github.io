@@ -11,6 +11,6 @@ ghp-import -m "Generate Pelican site" --no-jekyll -b main output -c www.bobrock.
 # Then push the changes in the main branch
 git push origin main
 # Now add the content changes to the content branch
-reap -p "Add your commit message: " MSG
+read -p "Add your commit message: " MSG
 git add content/ && git commit -m "${MSG}" && git push origin content
 ```
