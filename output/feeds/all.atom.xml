@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Blogrock's Blob</title><link href="https://bobrock.dev/" rel="alternate"></link><link href="https://bobrock.dev/feeds/all.atom.xml" rel="self"></link><id>https://bobrock.dev/</id><updated>2021-12-21T12:38:00-06:00</updated><entry><title>Test post</title><link href="https://bobrock.dev/test-post.html" rel="alternate"></link><published>2021-12-21T12:38:00-06:00</published><updated>2021-12-21T12:38:00-06:00</updated><author><name>bobrock</name></author><id>tag:bobrock.dev,2021-12-21:/test-post.html</id><content type="html">&lt;h1&gt;Test Post&lt;/h1&gt;
+&lt;p&gt;Hello! This is simply a test post to confirm that things are set up properly. &lt;/p&gt;
+&lt;p&gt;Check out this neat pic! &lt;img alt="A Neat Pic" src="https://bobrock.dev/images/test.png"&gt;&lt;/p&gt;</content><category term="misc"></category></entry></feed>
