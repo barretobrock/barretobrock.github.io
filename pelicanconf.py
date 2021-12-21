@@ -1,6 +1,6 @@
 AUTHOR = 'bobrock'
 SITENAME = "Blogrock's Blob"
-SITEURL = ''
+SITEURL = 'https://bobrock.de'
 
 PATH = 'content'
 
