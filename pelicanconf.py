@@ -1,12 +1,14 @@
 AUTHOR = 'bobrock'
 SITENAME = "Blogrock's Blob"
-SITEURL = 'https://bobrock.de'
+SITEURL = 'https://bobrock.dev'
 
 PATH = 'content'
 
 TIMEZONE = 'US/Central'
 
 DEFAULT_LANG = 'en'
+STATIC_PATHS = ['images']
+FAVICON = 'images/favicon.png'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
@@ -29,4 +31,4 @@ SOCIAL = (
 DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
+RELATIVE_URLS = True
