@@ -1,0 +1,62 @@
+baseURL = 'https://www.bobrock.dev/'
+languageCode = 'en-us'
+title = 'Standard Output'
+theme = "hugo-theme-m10c"
+menu_item_separator = '-'
+[frontmatter]
+    date = ['date', 'publishDate', 'lastmod']
+    lastmod = ['lastmod', ':git', 'date', 'publishDate']
+[menus]
+  [[menus.main]]
+    name = 'Home'
+    pageRef = '/'
+    weight = 10
+  [[menus.main]]
+    name = 'About'
+    pageRef = '/about'
+    weight = 20
+  [[menus.main]]
+    name = 'Projects'
+    pageRef = '/tags/projects'
+    weight = 20
+  [[menus.footer]]
+    identifier = 'tags'
+    name = 'Tags'
+    pageRef = '/tags/'
+  [[menus.footer]]
+    identifier = 'categories'
+    name = 'Categories'
+    pageRef = '/categories/'
+[params]
+    subtitle = 'The Blog of Bobrock'
+    description = 'noli cedere cognoscere'
+    avatar = '/avatar.png'
+    favicon = '/favicon.ico'
+    custom_css = ['/css/app.css']
+    custom_js = ['/js/count.js'] # Leave out count.js, as that's to be retrieved specifically in head.
+    [params.author]
+        name = 'bobrock'
+    [[params.social]]
+        icon = "brand-github"
+        name = "Github"
+        url = "https://github.com/barretobrock"
+    [[params.social]]
+        icon = "mail"
+        name = "Email"
+        url = "mailto:hello@bobrock.dev"
+[taxonomies]
+    category = 'categories'
+    tag = 'tags'
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      strikethrough = false
+      [markup.goldmark.extensions.extras]
+        [markup.goldmark.extensions.extras.delete]
+          enable = true
+        [markup.goldmark.extensions.extras.subscript]
+          enable = true
+        [markup.goldmark.extensions.extras.superscript]
+          enable = true
+  [markup.highlight]
+    style = 'solarized-dark'

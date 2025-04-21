@@ -1,0 +1,56 @@
+{{ define "main" }}
+  {{ $published_date := .Date | time.Format ":date_medium" }}
+  {{ $modified_date := .Lastmod | time.Format ":date_medium" }}
+
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">{{ .Title }}</h1>
+      {{- if ne .Type "page" }}
+      <div class="post-meta">
+        <div>
+          {{ partial "icon.html" (dict "ctx" $ "name" "calendar") }}
+          <span>Published: </span>
+          {{ $published_date }}
+        </div>
+        {{ if ne $published_date $modified_date }}
+          <div>
+            {{ partial "icon.html" (dict "ctx" $ "name" "calendar") }}
+            <span>Edited:   </span>
+            {{ $modified_date }}
+          </div>
+        {{ end }}
+        <div>
+          {{ partial "icon.html" (dict "ctx" $ "name" "clock") }}
+          {{ .ReadingTime }} min read
+        </div>
+        {{- with .Params.tags }}
+        <div>
+          {{ partial "icon.html" (dict "ctx" $ "name" "tag") }}
+          {{- range . -}}
+            {{ with $.Site.GetPage (printf "/%s/%s" "tags" . ) }}
+              <a class="tag" href="{{ .RelPermalink }}">{{ .Title }}</a>
+            {{- end }}
+          {{- end }}
+        </div>
+        {{- end }}
+        {{- with .Params.categories }}
+        <div>
+          {{ partial "icon.html" (dict "ctx" $ "name" "bookmark") }}
+          {{- range . -}}
+            {{ with $.Site.GetPage (printf "/%s/%s" "categories" . ) }}
+              <a class="tag" href="{{ .RelPermalink }}">{{ .Title }}</a>
+            {{- end }}
+          {{- end }}
+        </div>
+        {{- end }}
+      </div>
+      {{- end }}
+    </header>
+    <div class="post-content">
+      {{ .Content }}
+    </div>
+    <div class="post-footer">
+      {{ template "_internal/disqus.html" . }}
+    </div>
+  </article>
+{{ end }}

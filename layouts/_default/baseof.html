@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="{{ .Site.LanguageCode | default "en-us" }}">
+  <head>
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} // {{ .Site.Title }}{{ end }}</title>
+    <link rel="shortcut icon" href="{{ .Site.Params.favicon | default "/favicon.ico" }}" />
+    <meta charset="utf-8" />
+    {{ hugo.Generator }}
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="{{ .Site.Params.author.name | default "John Doe" }}" />
+    <meta name="description" content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Description }}{{ end }}" />
+    {{ $style := resources.Get "css/main.scss" | resources.ExecuteAsTemplate "css/main.scss" . | css.Sass | resources.Minify | resources.Fingerprint -}}
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
+    {{ range .Site.Params.custom_css -}}
+        <link rel="stylesheet" href="{{ . }}">
+    {{- end }}`
+    {{ with .OutputFormats.Get "rss" -}}
+    {{ printf `<link rel=%q type=%q href=%q title=%q>` .Rel .MediaType.Type .Permalink site.Title | safeHTML }}
+    {{ end }}
+
+    <!-- Goatcount -->
+    <script>
+      // Make sure this is *before* you load the count.js script; otherwise
+      // the pageview may get sent before this is loaded and this will just
+      // overwrite the object.
+      window.goatcounter = {allow_local: true}
+    </script>
+    {{ $goatcount := resources.Get "js/count.js" -}}
+    <script data-goatcounter="https://bobrockdev.goatcounter.com/count"
+            async src="{{ $goatcount.RelPermalink }}"></script>
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="{{ "" | relURL }}"><img class="app-header-avatar" src="{{ .Site.Params.avatar | default "avatar.jpg" | relURL }}" alt="{{ .Site.Params.author.name | default "John Doe" }}" /></a>
+      <span class="app-header-title">{{ .Site.Title }}</span>
+      <span class="app-header-subtitle">{{ .Site.Params.subtitle }}</span>
+      {{- with .Site.Menus.main }}
+      <nav class="app-header-menu">
+        {{- range $key, $item := . }}
+          {{- if ne $key 0 }}
+            {{ $.Site.Params.menu_item_separator | default " - " | safeHTML }}
+          {{ end }}
+          <a class="app-header-menu-item" href="{{ $item.URL }}">{{ $item.Name }}</a>
+        {{- end }}
+      </nav>
+      {{- end }}
+      <p>{{ .Site.Params.description | default "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula turpis sit amet elit pretium." }}</p>
+      {{- with .Site.Params.social }}
+      <div class="app-header-social">
+        {{ range . }}
+          <a href="{{ .url }}" target="_blank" rel="noreferrer noopener me">
+            {{ partial "icon.html" (dict "ctx" $ "name" .icon "title" .name) }}
+          </a>
+        {{ end }}
+      </div>
+      {{- end }}
+      {{- with .Site.Menus.footer }}
+        <nav class="app-footer-menu">
+          {{- range $key, $item := . }}
+            {{- if ne $key 0 }}
+              {{ $.Site.Params.menu_item_separator | default " - " | safeHTML }}
+            {{ end }}
+            <a class="app-header-menu-item" href="{{ $item.URL }}">{{ $item.Name }}</a>
+          {{- end }}
+        </nav>
+      {{- end }}
+    </header>
+    <main class="app-container">
+      {{ block "main" . }}
+        {{ .Content }}
+      {{ end }}
+      <footer class="site-footer">
+
+      </footer>
+    </main>
+    <div id="hidden-stats" style="display: none"></div>
+    <script defer>
+      var t = setInterval(function () {
+        if (window.goatcounter && window.goatcounter.visit_count) {
+          clearInterval(t)
+          window.goatcounter.visit_count({append: '#hidden-stats'})
+          let d = document.getElementById("hidden-stats");
+          let views = parseInt(d.innerHTML);
+          console.log("Total views: ", views);
+        }
+      }, 500)
+    </script>
+    {{ if .Store.Get "hasMermaid" }}
+      <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true });
+      </script>
+    {{ end }}
+  </body>
+</html>

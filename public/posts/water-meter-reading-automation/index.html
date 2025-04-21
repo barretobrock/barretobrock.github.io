@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>Automating Water Meter Reads in the Laziest Way // Standard Output</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.146.5">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="bobrock" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="/css/main.min.5b1fcc8902588589c4767187402a3c29f8b8d7a6fdef6d9f8f77045bb0d14fee.css" />
+    <link rel="stylesheet" href="/css/app.css">`
+    
+
+    
+    <script>
+      
+      
+      
+      window.goatcounter = {allow_local: true}
+    </script>
+    <script data-goatcounter="https://bobrockdev.goatcounter.com/count"
+            async src="/js/count.js"></script>
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="/"><img class="app-header-avatar" src="/avatar.png" alt="bobrock" /></a>
+      <span class="app-header-title">Standard Output</span>
+      <span class="app-header-subtitle">The Blog of Bobrock</span>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/">Home</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/about/">About</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/tags/projects/">Projects</a>
+      </nav>
+      <p>noli cedere cognoscere</p>
+      <div class="app-header-social">
+        
+          <a href="https://github.com/barretobrock" target="_blank" rel="noreferrer noopener me">
+            <svg class="icon icon-brand-github" viewBox="0 0 24 24" fill="currentColor"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          </a>
+        
+          <a href="mailto:hello@bobrock.dev" target="_blank" rel="noreferrer noopener me">
+            <svg class="icon icon-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>mail</title><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          </a>
+        
+      </div>
+        <nav class="app-footer-menu">
+            <a class="app-header-menu-item" href="/categories/">Categories</a>
+               - 
+            
+            <a class="app-header-menu-item" href="/tags/">Tags</a>
+        </nav>
+    </header>
+    <main class="app-container">
+      
+  
+  
+
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Automating Water Meter Reads in the Laziest Way</h1>
+      <div class="post-meta">
+        <div>
+          <svg class="icon icon-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>calendar</title><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+          <span>Published: </span>
+          Apr 20, 2025
+        </div>
+        
+        <div>
+          <svg class="icon icon-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>clock</title><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          7 min read
+        </div>
+        <div>
+          <svg class="icon icon-tag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>tag</title><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+              <a class="tag" href="/tags/projects/">Projects</a>
+              <a class="tag" href="/tags/raspberry-pi/">Raspberry-Pi</a>
+              <a class="tag" href="/tags/python/">Python</a>
+        </div>
+        <div>
+          <svg class="icon icon-bookmark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>bookmark</title><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+              <a class="tag" href="/categories/home-automation/">Home-Automation</a>
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <blockquote>
+<p>This post is a recollection of a project that took place about 13 years ago, so details might be hazy and the actual implementation might be either easier or more involved, depending on the tech used.</p></blockquote>
+<h3 id="preamble">Preamble</h3>
+<p>Back in the day, my apartment had hot &amp; cold water meters mounted above the ceiling of my bathroom that served as the water meters for the whole place. The ceiling had these tiles you&rsquo;d remove<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> in order to access the area where the meters were stored, so it wasn&rsquo;t like the meters were immediately visible when you step into the bathroom. It was my task, at the beginning of every month, to grab a chair, lift up one of the ceiling tiles, and record the numbers on the water meters to then send it to the building&rsquo;s maintenance team who also handled billing for utilities. This was a few years before the maintenance team swapped out these manual meters for the more convenient ones that transmitted their data wirelessly to a nearby device, so there was no going around the manual inspection of the gauges.</p>
+<p>Perhaps it goes without saying, but I quickly got tired of this task. I know it only happened once every month, but I&rsquo;m naturally a lazy person when faced with such a mundane task. Additionally, I&rsquo;m not the best at multi-tasking, especially when the tasks to juggle are balancing on a chair while trying not to fall and injure myself, observing numbers from a distance and then writing those numbers on a pad and remembering which numbers go to which meter. So, I sought out a means of automating all of this. I reasoned if I could just remove the need to get up into the tiled part of my ceiling, this would be a big win for productivity. Before I could really get to work on a solution, though, I need to define some goals&hellip;</p>
+<h3 id="goals">Goals</h3>
+<p>In order for this project to be a success and actually save me the time &amp; effort, it would need to:</p>
+<ul>
+<li>Last months with no interaction needed (&ldquo;vacation safe&rdquo;)</li>
+<li>Have a light source to use to better see the water meter without the tiles removed (the bathroom&rsquo;s lights were mounted on the tiles, so the meter&rsquo;s space was dark)</li>
+<li>Have a means of communicating the meter info in a consistently legible manner (no manual do-overs allowed)</li>
+<li>Communicate the meter info in a way that I&rsquo;m able to see it even when I&rsquo;m away from the apartment (in case I&rsquo;m on vacation)</li>
+</ul>
+<h3 id="implementation">Implementation</h3>
+<p>For this project (and more importantly, during this particular time), I chose to go with something relatively low-power like a Raspberry Pi. I needed something that didn&rsquo;t consume a lot of energy, but something that could handle extracting an image through a camera. I think nowadays I&rsquo;d probably go with something even more lightweight like an ESP32 with a camera module.</p>
+<p>This was back before Raspberry Pis even had built-in WiFi modules, too, so I had to do some research about what WiFi USB dongle would best be compatible with the RasPi. Fortunately, that wasn&rsquo;t too hard of a task. Instead of purchasing the camera module that was best compatible with the RasPi, I opted for a cheaper solution and took an old USB webcam I had laying around. I figured if it turned difficult to get the RasPi to &lsquo;see&rsquo; the device, I could then purchase the actual camera module.</p>
+<p>Fortunately, after some tinkering, the camera module ended up working out just fine and I ended up writing a script that would take a pic and email it to me. I scheduled the script by using <code>crontab</code> in my Linux-flavored RasPi.</p>
+<p>Here&rsquo;s an early practice shot of how the meters looked with the bathroom lights on:
+<img src="images/meters-1.png" alt="Shot of two well-lit water meters against a concrete ceiling"></p>
+<p>&hellip;but also, here&rsquo;s how the meters looked without the lights on :))
+<img src="images/meters-2.png" alt="Shot of meters in total darkness"></p>
+<p>So, I had the largest problems resolved (getting the images to me from anywhere), I just needed to figure out how to set up lighting&hellip; Again, I set off to tinker.</p>
+<p>An interesting problem arose with this side of the project. If I used too many lights, or a light that&rsquo;s too powerful, the power would drain from the RasPi (or its components like the WiFi dongle or &ndash; more importantly &ndash; the USB camera that also needed to be on while the lights are on). Thinking I needed something that just &lsquo;sips&rsquo; the electricity, I tried a few bare LEDs in what I thought was a pretty lightweight circuit. It turned out to be not enough light focused on the meters. Another issue was that each meter was far enough away from the other that having a single light source just wouldn&rsquo;t cut it. I&rsquo;d need one light source for each meter, or I&rsquo;d need a way to balance the lighting just well enough to get each meter lit up.</p>
+<p>After experimenting with some spare LEDs I had laying around, the issue I discovered with them is that they&rsquo;re just not individually bright enough for the camera to pick up. Additionally, only a fraction of the light emitted was actually going where i wanted it to, and I didn&rsquo;t really feel like playing around with reflective dishes to try to optimize that solution. I did, however, have a spare headlamp that also happened to be 3V, which was close enough to RasPi&rsquo;s standard for me to attempt controlling the light through one of the RasPi&rsquo;s GPIO pins. A few trials getting the script sequence down, I was able to get a well-enough lit photo from the same power source as the RasPi!
+<img src="images/meters-3.png" alt="Shot of a less lit pair of meters, but the numbers are still legible"></p>
+<p>That&rsquo;s it, problem solved, right? Well, true to my overengineering nature, it wasn&rsquo;t good enough. I let the script run over weeks and recorded what issues I had with using it. After recognizing some recurring themes, I realized that I wanted a cleaner result. I dove into documentation about automated image processing. I realized that I should boost the saturation &amp; contrast of the image, and possibly crop the meters closer together to make reading from my phone an almost trivial task.</p>
+<p>It&rsquo;s also around this time that I tried out Optical Character Recognition (OCR) to try and get the computer to guess the numbers for me so I wouldn&rsquo;t even need to handle the transcription part. While that was mostly successful, I worried about relying too heavily on that side of the process and opted to just focus on getting the images cleaned up before being sent out. Transcription after that isn&rsquo;t much of a chore anyway.</p>
+<p>With some experimentation, I ended up with the following:
+<img src="images/meters-4.png" alt="Shot of closely cropped meters side by side with much higher saturation of color"></p>
+<p>Now this was an improvement! This solution lasted many months, perhaps even a year before I realized that I probably could crop it just a little bit more, stack the numbers on top of each other and (after yet more experimentation) convert it to greyscale, which seemed to help with reading the numbers from a cheap phone screen:</p>
+<p><img src="images/meters-5.jpg" alt="Shot of two closely cropped numbers in greyscale stacked on top of each other"></p>
+<p>This is the process that lasted for a few more years until the building maintenance team decided to swap out the meters for upgraded, remote-read capable ones.</p>
+<h3 id="conclusion">Conclusion</h3>
+<p>I look back fondly at this project. In many ways, it was my first practical home automation project. I had built temperature logging devices before this (and consequently written a bunch of temperature analysis &amp; correlation scripts in R), but this was the first project that actually made my life easier instead of the others that merely sought to uncover more data hidden in the world around me. Both pursuits were fun &amp; worthwhile, but this one in particular proved to me that there can be a very practical use with seemingly trivial devices if the need is there. This project led me to experiment more with writing in Python (before, I was still mainly writing in Visual Basic and R for work) - a programming language that I now use for the bulk of both work and personal projects. I&rsquo;m not sure if I owe my entire interest in Python programming to this project&rsquo;s success, but I&rsquo;m certain that it helped me find a way forward to exploring Python more in-depth.</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>much like what you may see in a typical American office &ndash; that was the first apartment bathroom that I had seen them used, at least&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+      <footer class="site-footer">
+
+      </footer>
+    </main>
+    <div id="hidden-stats" style="display: none"></div>
+    <script defer>
+      var t = setInterval(function () {
+        if (window.goatcounter && window.goatcounter.visit_count) {
+          clearInterval(t)
+          window.goatcounter.visit_count({append: '#hidden-stats'})
+          let d = document.getElementById("hidden-stats");
+          let views = parseInt(d.innerHTML);
+          console.log("Total views: ", views);
+        }
+      }, 500)
+    </script>
+    
+  </body>
+</html>

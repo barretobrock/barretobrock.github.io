@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>A Practical Intro to SDR and Daemonization // Standard Output</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.146.5">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="bobrock" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="/css/main.min.5b1fcc8902588589c4767187402a3c29f8b8d7a6fdef6d9f8f77045bb0d14fee.css" />
+    <link rel="stylesheet" href="/css/app.css">`
+    
+
+    
+    <script>
+      
+      
+      
+      window.goatcounter = {allow_local: true}
+    </script>
+    <script data-goatcounter="https://bobrockdev.goatcounter.com/count"
+            async src="/js/count.js"></script>
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="/"><img class="app-header-avatar" src="/avatar.png" alt="bobrock" /></a>
+      <span class="app-header-title">Standard Output</span>
+      <span class="app-header-subtitle">The Blog of Bobrock</span>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/">Home</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/about/">About</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/tags/projects/">Projects</a>
+      </nav>
+      <p>noli cedere cognoscere</p>
+      <div class="app-header-social">
+        
+          <a href="https://github.com/barretobrock" target="_blank" rel="noreferrer noopener me">
+            <svg class="icon icon-brand-github" viewBox="0 0 24 24" fill="currentColor"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          </a>
+        
+          <a href="mailto:hello@bobrock.dev" target="_blank" rel="noreferrer noopener me">
+            <svg class="icon icon-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>mail</title><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          </a>
+        
+      </div>
+        <nav class="app-footer-menu">
+            <a class="app-header-menu-item" href="/categories/">Categories</a>
+               - 
+            
+            <a class="app-header-menu-item" href="/tags/">Tags</a>
+        </nav>
+    </header>
+    <main class="app-container">
+      
+  
+  
+
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">A Practical Intro to SDR and Daemonization</h1>
+      <div class="post-meta">
+        <div>
+          <svg class="icon icon-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>calendar</title><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+          <span>Published: </span>
+          Apr 1, 2022
+        </div>
+        
+          <div>
+            <svg class="icon icon-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>calendar</title><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            <span>Edited:   </span>
+            Apr 20, 2025
+          </div>
+        
+        <div>
+          <svg class="icon icon-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>clock</title><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          12 min read
+        </div>
+        <div>
+          <svg class="icon icon-tag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>tag</title><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+              <a class="tag" href="/tags/projects/">Projects</a>
+              <a class="tag" href="/tags/python/">Python</a>
+        </div>
+        <div>
+          <svg class="icon icon-bookmark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>bookmark</title><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+              <a class="tag" href="/categories/home-automation/">Home-Automation</a>
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <p>Software-defined radios (SDR) are an amazing thing. Without turning any knobs or sliding any sliders, you&rsquo;re often able to adjust the radio frequency with just a few commands to the machine that&rsquo;s connected to the device. While typically you can use SDR to not only receive signals, but also transmit, this post will cover just a very basic, but hopefully practical, intro into using SDR.</p>
+<h3 id="why-do-this">Why do this?</h3>
+<p>We have a lot of ways to gather data around the house these days. The data I&rsquo;ve generally been the most interested in for the longest time has been temperature. There are a lot of great temp sensors one can procure for various device systems these days. A lot of companies that are temp data adjacent will even offer sensors that interface with their devices: My HVAC controller offers this, as does many other manufacturers in that realm and the general home automation realm. It&rsquo;s both neat and seemingly relieving to know that there&rsquo;s so many options to choose from.</p>
+<p>And yet, these days you also can&rsquo;t seem to just &ldquo;buy&rdquo; a sensor product without considering the ramifications of the purchase. Some sensors have proprietary technology that renders it unusable outside of that one manufacturer&rsquo;s domain. It can be difficult to purchase an already expensive sensor when you consider that you&rsquo;re going to have to trust that the company won&rsquo;t suddenly go defunct or simply decide they don&rsquo;t support your sensor&rsquo;s model anymore (but you can certainly buy the new model!). Taking this into consideration, I wanted to see how difficult it would be to build out a fairly flexible system of temp sensors.</p>
+<h3 id="goals">Goals</h3>
+<p>For this system to work, I needed to map out some goals to make sure I&rsquo;d select the ideal components for success:</p>
+<ul>
+<li>Relatively cheap temp sensors</li>
+<li>The sensors should all operate on the same frequency</li>
+<li>Sensors should be battery powered, and the batteries should last longer than 60 days in normal conditions</li>
+<li>The SDR should allow for constant use over months</li>
+<li>The SDR should allow access from an automation script that collects the data received</li>
+</ul>
+<h3 id="materials">Materials</h3>
+<p>Considering the above goals, I ended up selecting the <a href="https://www.nooelec.com/store/sdr/nesdr-mini.html">NooElec MiniSDR</a>, which comes as a convenient USB stick. For the temperature sensor, I ended up going with the <a href="https://www.acurite.com/products/indoor-outdoor-temperature-humidity-sensor?variant=41330220335217">AcuRite Model 11112-609TXC</a>, namely because various forum posts suggested that its broadcast frequency at 433MHz was ideal for this kind of project - namely, that signal is quite common for such devices to use, so it&rsquo;s likely I might be able to incorporate other, unrelated devices to the same system.</p>
+<p>In all, getting both the SDR and 2 sensors cost about the same as getting one add-on sensor from my HVAC controller&rsquo;s system, though granted that sensor a) didn&rsquo;t require as much setup and b) probably was better optimized for battery operation. One thing to note, though, was that the sensor also included a fancy occupancy detection feature that I honestly wasn&rsquo;t sure I really even needed :).</p>
+<h3 id="installation">Installation</h3>
+<p>First, I plugged in the SDR to one of my home servers. It&rsquo;s nothing fancy, just a mini pc that&rsquo;s running in &ldquo;headless&rdquo; (i.e., no screens) mode, so I have to access it through another machine that has a screen (typically this is done via SSH).</p>
+<p>Next, I had to install some system-wide software to allow me to interface with the USB SDR. As my server has gone from running Ubuntu to running Arch Linux, the dependencies I needed to install have differed based on the OS used:</p>
+<p><strong>For Ubuntu</strong></p>
+<figure class="highlight codeblock">
+  <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt install libtool libusb-1.0-0-dev librtlsdr-dev rtl-sdr build-essential autoconf cmake pkg-config</span></span></code></pre>
+</figure><p><strong>For Arch / Manjaro</strong></p>
+<figure class="highlight codeblock">
+  <pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sudo pacman -Sy libtool libusb rx_tools rtl-sdr autoconf cmake pkg-config</span></span></code></pre>
+</figure><p>Next, I cloned the <a href="https://github.com/merbanan/rtl_433">rtl_433</a> repo locally. This repo helps with interfacing with the SDR and receiving the data from the 433MHz band (though note that this repo actually handles other bands as well!).</p>
+<figure class="highlight codeblock">
+  <pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git clone https://github.com/merbanan/rtl_433.git ~/extras/rtl_433/</span></span></code></pre>
+</figure><p>Per the instructions on that last repo, I built and installed <code>rtl_433</code> locally:</p>
+<figure class="highlight codeblock">
+  <pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#b58900">cd</span> rtl_433/
+</span></span><span style="display:flex;"><span>mkdir build
+</span></span><span style="display:flex;"><span><span style="color:#b58900">cd</span> build
+</span></span><span style="display:flex;"><span>cmake ..
+</span></span><span style="display:flex;"><span>make
+</span></span><span style="display:flex;"><span>make install</span></span></code></pre>
+</figure><h3 id="creating-the-daemons">Creating the daemons</h3>
+<p>Next, I had to create two daemons: one to stream, one to collect. The streaming one just &rsquo;listens&rsquo; to the SDR and forwards the info so that the collection service can do its thing. The collection service filters through that info and bundles the info it picks up, then saves it at regular intervals.</p>
+<p>If you&rsquo;re new to computing, the term &lsquo;daemon&rsquo; just means we&rsquo;re creating something that is meant to run in the background without us controlling it in any way.</p>
+<blockquote>
+<p><strong>Fun fact</strong> - The term daemon doesn&rsquo;t mean that computing has some sort of connection with the Underworld. The term was actually borrowed from Greek mythology, where daemons were supernatural beings tirelessly working in the background.</p></blockquote>
+<p>To make these daemons, I just wrote the stream and collect processes in Python. Note that I use <a href="https://loguru.readthedocs.io/en/stable/">loguru</a> in a lot of my projects for easier logging setup &amp; review. You don&rsquo;t have to include that, of course.</p>
+<figure class="highlight codeblock">
+  <figcaption><span>../stream/rf_stream.py</span> </figcaption>
+  <pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#719e07">import</span> subprocess
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#719e07">from</span> loguru <span style="color:#719e07">import</span> logger
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>serv_ip <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;ip_of_server&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>cmd <span style="color:#719e07">=</span> [<span style="color:#2aa198">&#39;/usr/local/bin/rtl_433&#39;</span>, <span style="color:#2aa198">&#39;-F&#39;</span>, <span style="color:#2aa198">f</span><span style="color:#2aa198">&#39;syslog:</span><span style="color:#2aa198">{</span>serv_ip<span style="color:#2aa198">}</span><span style="color:#2aa198">:1433&#39;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>logger<span style="color:#719e07">.</span>info(<span style="color:#2aa198">f</span><span style="color:#2aa198">&#39;Sending command: </span><span style="color:#2aa198">{</span><span style="color:#2aa198">&#34; &#34;</span><span style="color:#719e07">.</span>join(cmd)<span style="color:#2aa198">}</span><span style="color:#2aa198">&#39;</span>)
+</span></span><span style="display:flex;"><span>process <span style="color:#719e07">=</span> subprocess<span style="color:#719e07">.</span>Popen(cmd, stdout<span style="color:#719e07">=</span>subprocess<span style="color:#719e07">.</span>PIPE, stderr<span style="color:#719e07">=</span>subprocess<span style="color:#719e07">.</span>STDOUT)
+</span></span><span style="display:flex;"><span>process_output, _ <span style="color:#719e07">=</span> process<span style="color:#719e07">.</span>communicate()
+</span></span><span style="display:flex;"><span>logger<span style="color:#719e07">.</span>debug(<span style="color:#2aa198">f</span><span style="color:#2aa198">&#39;Process output: </span><span style="color:#2aa198">{</span>process_output<span style="color:#2aa198">}</span><span style="color:#2aa198">&#39;</span>)</span></span></code></pre>
+</figure><figure class="highlight codeblock">
+  <figcaption><span>../collect/rf_collect.py</span> </figcaption>
+  <pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#586e75">#!/usr/bin/env python3</span>
+</span></span><span style="display:flex;"><span><span style="color:#2aa198">&#34;&#34;&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#2aa198">ETL for RTL_433 json objects via syslog -&gt; processed Dataframe -&gt; influx
+</span></span></span><span style="display:flex;"><span><span style="color:#2aa198">
+</span></span></span><span style="display:flex;"><span><span style="color:#2aa198">Note: depends on `rf_stream` already being running and feeding data to port 1433
+</span></span></span><span style="display:flex;"><span><span style="color:#2aa198">    via `rtl_433 -F syslog::1433`
+</span></span></span><span style="display:flex;"><span><span style="color:#2aa198">&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#719e07">from</span> datetime <span style="color:#719e07">import</span> datetime
+</span></span><span style="display:flex;"><span><span style="color:#719e07">import</span> json
+</span></span><span style="display:flex;"><span><span style="color:#719e07">from</span> json <span style="color:#719e07">import</span> JSONDecodeError
+</span></span><span style="display:flex;"><span><span style="color:#719e07">from</span> pathlib <span style="color:#719e07">import</span> Path
+</span></span><span style="display:flex;"><span><span style="color:#719e07">import</span> signal
+</span></span><span style="display:flex;"><span><span style="color:#719e07">import</span> socket
+</span></span><span style="display:flex;"><span><span style="color:#719e07">from</span> typing <span style="color:#719e07">import</span> (
+</span></span><span style="display:flex;"><span>    Dict,
+</span></span><span style="display:flex;"><span>    List,
+</span></span><span style="display:flex;"><span>    Optional,
+</span></span><span style="display:flex;"><span>    Union
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#719e07">from</span> loguru <span style="color:#719e07">import</span> logger
+</span></span><span style="display:flex;"><span><span style="color:#719e07">import</span> pandas <span style="color:#719e07">as</span> pd
+</span></span><span style="display:flex;"><span><span style="color:#719e07">import</span> yaml
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#719e07">class</span> <span style="color:#268bd2">GracefulKiller</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#2aa198">&#34;&#34;&#34;Means of gracefully killing a script upon SIGTERM/SIGINT command
+</span></span></span><span style="display:flex;"><span><span style="color:#2aa198">    reception via systemd
+</span></span></span><span style="display:flex;"><span><span style="color:#2aa198">
+</span></span></span><span style="display:flex;"><span><span style="color:#2aa198">    Example:
+</span></span></span><span style="display:flex;"><span><span style="color:#2aa198">        &gt;&gt;&gt; killer = GracefulKiller()
+</span></span></span><span style="display:flex;"><span><span style="color:#2aa198">        &gt;&gt;&gt; # Some other code...
+</span></span></span><span style="display:flex;"><span><span style="color:#2aa198">        &gt;&gt;&gt; while not killer.kill_now:
+</span></span></span><span style="display:flex;"><span><span style="color:#2aa198">        &gt;&gt;&gt;     # ...
+</span></span></span><span style="display:flex;"><span><span style="color:#2aa198">        &gt;&gt;&gt;     # spooky daemony stuff here
+</span></span></span><span style="display:flex;"><span><span style="color:#2aa198">        &gt;&gt;&gt;     # ...
+</span></span></span><span style="display:flex;"><span><span style="color:#2aa198">        &gt;&gt;&gt; # If we&#39;re here, systemd sent a SIGINT/SIGTERM command.
+</span></span></span><span style="display:flex;"><span><span style="color:#2aa198">        &gt;&gt;&gt; # Now we can close out connections and log objects
+</span></span></span><span style="display:flex;"><span><span style="color:#2aa198">        &gt;&gt;&gt; db_connection.close()
+</span></span></span><span style="display:flex;"><span><span style="color:#2aa198">        &gt;&gt;&gt; log.close()
+</span></span></span><span style="display:flex;"><span><span style="color:#2aa198">    &#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#719e07">def</span> __init__(<span style="color:#268bd2">self</span>):
+</span></span><span style="display:flex;"><span>        signal<span style="color:#719e07">.</span>signal(signal<span style="color:#719e07">.</span>SIGINT, <span style="color:#268bd2">self</span><span style="color:#719e07">.</span>exit_gracefully)
+</span></span><span style="display:flex;"><span>        signal<span style="color:#719e07">.</span>signal(signal<span style="color:#719e07">.</span>SIGTERM, <span style="color:#268bd2">self</span><span style="color:#719e07">.</span>exit_gracefully)
+</span></span><span style="display:flex;"><span>        <span style="color:#268bd2">self</span><span style="color:#719e07">.</span>kill_now <span style="color:#719e07">=</span> <span style="color:#cb4b16">False</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#719e07">def</span> <span style="color:#268bd2">exit_gracefully</span>(<span style="color:#268bd2">self</span>, signum, frame):
+</span></span><span style="display:flex;"><span>        <span style="color:#2aa198">&#34;&#34;&#34;Sets the kill_now property to True,
+</span></span></span><span style="display:flex;"><span><span style="color:#2aa198">        which allows the script to exit the while loop&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#268bd2">self</span><span style="color:#719e07">.</span>kill_now <span style="color:#719e07">=</span> <span style="color:#cb4b16">True</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span><span style="color:#719e07">def</span> <span style="color:#268bd2">parse_syslog</span>(ln: <span style="color:#b58900">bytes</span>) <span style="color:#719e07">-&gt;</span> <span style="color:#b58900">str</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#2aa198">&#34;&#34;&#34;Try to extract the payload from a syslog line.&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    ln <span style="color:#719e07">=</span> ln<span style="color:#719e07">.</span>decode(<span style="color:#2aa198">&#34;ascii&#34;</span>)  <span style="color:#586e75"># also UTF-8 if BOM</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#719e07">if</span> ln<span style="color:#719e07">.</span>startswith(<span style="color:#2aa198">&#34;&lt;&#34;</span>):
+</span></span><span style="display:flex;"><span>        <span style="color:#586e75"># fields should be &#34;&lt;PRI&gt;VER&#34;, timestamp, hostname, command, pid, mid, sdata, payload</span>
+</span></span><span style="display:flex;"><span>        fields <span style="color:#719e07">=</span> ln<span style="color:#719e07">.</span>split(<span style="color:#cb4b16">None</span>, <span style="color:#2aa198">7</span>)
+</span></span><span style="display:flex;"><span>        ln <span style="color:#719e07">=</span> fields[<span style="color:#719e07">-</span><span style="color:#2aa198">1</span>]
+</span></span><span style="display:flex;"><span>    <span style="color:#719e07">return</span> ln
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>DATA_DIR <span style="color:#719e07">=</span> Path()<span style="color:#719e07">.</span>home()<span style="color:#719e07">.</span>joinpath(<span style="color:#2aa198">&#39;data/rf&#39;</span>)
+</span></span><span style="display:flex;"><span>DATA_DIR<span style="color:#719e07">.</span>mkdir(exist_ok<span style="color:#719e07">=</span><span style="color:#cb4b16">True</span>)
+</span></span><span style="display:flex;"><span>unknown_devs_file <span style="color:#719e07">=</span> DATA_DIR<span style="color:#719e07">.</span>joinpath(<span style="color:#2aa198">f</span><span style="color:#2aa198">&#39;unknown_devs_</span><span style="color:#2aa198">{</span>datetime<span style="color:#719e07">.</span>today()<span style="color:#2aa198">:</span><span style="color:#2aa198">%F</span><span style="color:#2aa198">}</span><span style="color:#2aa198">.csv&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>UDP_IP <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;ip_of_server&#34;</span>
+</span></span><span style="display:flex;"><span>UDP_PORT <span style="color:#719e07">=</span> <span style="color:#2aa198">1433</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>hass <span style="color:#719e07">=</span> HAHelper()
+</span></span><span style="display:flex;"><span>killer <span style="color:#719e07">=</span> GracefulKiller()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># device id to device-specific data mapping</span>
+</span></span><span style="display:flex;"><span>mappings: Dict[<span style="color:#b58900">int</span>, Dict[<span style="color:#b58900">str</span>, Union[<span style="color:#b58900">str</span>, Optional[<span style="color:#b58900">int</span>], List[Dict[<span style="color:#b58900">str</span>, <span style="color:#b58900">str</span>]]]]]
+</span></span><span style="display:flex;"><span>mappings <span style="color:#719e07">=</span> yaml<span style="color:#719e07">.</span>safe_load(Path(__file__)<span style="color:#719e07">.</span>parent<span style="color:#719e07">.</span>joinpath(<span style="color:#2aa198">&#39;nodes.yaml&#39;</span>)<span style="color:#719e07">.</span>open())
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75"># Map the names of the variables from the various sensors to what&#39;s acceptable in the db</span>
+</span></span><span style="display:flex;"><span>possible_measurements <span style="color:#719e07">=</span> [<span style="color:#2aa198">&#39;temperature_C&#39;</span>, <span style="color:#2aa198">&#39;humidity&#39;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>logger<span style="color:#719e07">.</span>debug(<span style="color:#2aa198">&#39;Establishing socket...&#39;</span>)
+</span></span><span style="display:flex;"><span>sock <span style="color:#719e07">=</span> socket<span style="color:#719e07">.</span>socket(socket<span style="color:#719e07">.</span>AF_INET, socket<span style="color:#719e07">.</span>SOCK_DGRAM, socket<span style="color:#719e07">.</span>IPPROTO_UDP)
+</span></span><span style="display:flex;"><span>sock<span style="color:#719e07">.</span>bind((UDP_IP, UDP_PORT))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>unknown_devs_df <span style="color:#719e07">=</span> pd<span style="color:#719e07">.</span>DataFrame()
+</span></span><span style="display:flex;"><span>last_dt <span style="color:#719e07">=</span> datetime<span style="color:#719e07">.</span>now()<span style="color:#719e07">.</span>date()     <span style="color:#586e75"># For reporting daily unknown devices</span>
+</span></span><span style="display:flex;"><span>start_s <span style="color:#719e07">=</span> <span style="color:#b58900">int</span>(datetime<span style="color:#719e07">.</span>now()<span style="color:#719e07">.</span>timestamp())
+</span></span><span style="display:flex;"><span>interval_s <span style="color:#719e07">=</span> <span style="color:#2aa198">60</span>     <span style="color:#586e75"># Update values every minute</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>logger<span style="color:#719e07">.</span>debug(<span style="color:#2aa198">&#39;Beginning loop!&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#719e07">while</span> <span style="color:#719e07">not</span> killer<span style="color:#719e07">.</span>kill_now:
+</span></span><span style="display:flex;"><span>    line, _addr <span style="color:#719e07">=</span> sock<span style="color:#719e07">.</span>recvfrom(<span style="color:#2aa198">1024</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#586e75"># Convert line from bytes to str, prep for conversion into dict</span>
+</span></span><span style="display:flex;"><span>    line <span style="color:#719e07">=</span> parse_syslog(line)
+</span></span><span style="display:flex;"><span>    data <span style="color:#719e07">=</span> <span style="color:#cb4b16">None</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#719e07">try</span>:
+</span></span><span style="display:flex;"><span>        data <span style="color:#719e07">=</span> json<span style="color:#719e07">.</span>loads(line)
+</span></span><span style="display:flex;"><span>    <span style="color:#719e07">except</span> JSONDecodeError <span style="color:#719e07">as</span> e:
+</span></span><span style="display:flex;"><span>        logger<span style="color:#719e07">.</span>error(e, <span style="color:#2aa198">f</span><span style="color:#2aa198">&#39;Unable to parse this object. Skipping. </span><span style="color:#cb4b16">\n</span><span style="color:#2aa198"> </span><span style="color:#2aa198">{</span>line<span style="color:#2aa198">}</span><span style="color:#2aa198">&#39;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#719e07">continue</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#719e07">if</span> <span style="color:#2aa198">&#34;model&#34;</span> <span style="color:#719e07">not</span> <span style="color:#719e07">in</span> data:
+</span></span><span style="display:flex;"><span>        <span style="color:#586e75"># Exclude anything that doesn&#39;t contain a device &#39;model&#39; key</span>
+</span></span><span style="display:flex;"><span>        logger<span style="color:#719e07">.</span>info(<span style="color:#2aa198">&#39;Skipping, missed &#34;model&#34; key: &#39;</span>
+</span></span><span style="display:flex;"><span>                  <span style="color:#2aa198">f</span><span style="color:#2aa198">&#39;</span><span style="color:#2aa198">{</span>json<span style="color:#719e07">.</span>dumps(data, indent<span style="color:#719e07">=</span><span style="color:#2aa198">2</span>)<span style="color:#2aa198">}</span><span style="color:#2aa198">&#39;</span>)
+</span></span><span style="display:flex;"><span>        unknown_devs_df <span style="color:#719e07">=</span> pd<span style="color:#719e07">.</span>concat([unknown_devs_df, pd<span style="color:#719e07">.</span>DataFrame(data, index<span style="color:#719e07">=</span>[<span style="color:#2aa198">0</span>])])
+</span></span><span style="display:flex;"><span>        <span style="color:#719e07">continue</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#586e75"># Begin processing the data</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#719e07">if</span> data <span style="color:#719e07">is</span> <span style="color:#719e07">not</span> <span style="color:#cb4b16">None</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#586e75"># Begin extraction process</span>
+</span></span><span style="display:flex;"><span>        dev_id <span style="color:#719e07">=</span> data<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#39;id&#39;</span>)
+</span></span><span style="display:flex;"><span>        rcv_time <span style="color:#719e07">=</span> data<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#39;time&#39;</span>)
+</span></span><span style="display:flex;"><span>        dev_model <span style="color:#719e07">=</span> data<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#39;model&#39;</span>)
+</span></span><span style="display:flex;"><span>        logger<span style="color:#719e07">.</span>debug(<span style="color:#2aa198">f</span><span style="color:#2aa198">&#39;Receiving from device: </span><span style="color:#2aa198">{</span>dev_model<span style="color:#2aa198">}</span><span style="color:#2aa198"> (</span><span style="color:#2aa198">{</span>dev_id<span style="color:#2aa198">}</span><span style="color:#2aa198">)&#39;</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#719e07">if</span> dev_id <span style="color:#719e07">in</span> mappings<span style="color:#719e07">.</span>keys():
+</span></span><span style="display:flex;"><span>            <span style="color:#586e75"># Device is known sensor... record data</span>
+</span></span><span style="display:flex;"><span>            dev_dict <span style="color:#719e07">=</span> mappings[dev_id]
+</span></span><span style="display:flex;"><span>            name <span style="color:#719e07">=</span> dev_dict[<span style="color:#2aa198">&#39;name&#39;</span>]
+</span></span><span style="display:flex;"><span>            friendly_name_prefix <span style="color:#719e07">=</span> dev_dict[<span style="color:#2aa198">&#39;friendly_name_prefix&#39;</span>]
+</span></span><span style="display:flex;"><span>            sensors <span style="color:#719e07">=</span> dev_dict[<span style="color:#2aa198">&#39;sensors&#39;</span>]  <span style="color:#586e75"># type: List[Dict]</span>
+</span></span><span style="display:flex;"><span>            last_update <span style="color:#719e07">=</span> dev_dict<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#39;last_update&#39;</span>, start_s)
+</span></span><span style="display:flex;"><span>            logger<span style="color:#719e07">.</span>debug(<span style="color:#2aa198">f</span><span style="color:#2aa198">&#39;Device identified. Name: </span><span style="color:#2aa198">{</span>name<span style="color:#2aa198">}</span><span style="color:#2aa198">.&#39;</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#719e07">if</span> datetime<span style="color:#719e07">.</span>now()<span style="color:#719e07">.</span>timestamp() <span style="color:#719e07">-</span> last_update <span style="color:#719e07">&gt;</span> interval_s:
+</span></span><span style="display:flex;"><span>                logger<span style="color:#719e07">.</span>debug(<span style="color:#2aa198">&#39;Interval lapsed. Sending measurements to HASS...&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                <span style="color:#719e07">for</span> sensor <span style="color:#719e07">in</span> sensors:
+</span></span><span style="display:flex;"><span>                    data_name <span style="color:#719e07">=</span> sensor<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#39;data_name&#39;</span>)
+</span></span><span style="display:flex;"><span>                    <span style="color:#719e07">if</span> data_name <span style="color:#719e07">not</span> <span style="color:#719e07">in</span> data<span style="color:#719e07">.</span>keys():
+</span></span><span style="display:flex;"><span>                        logger<span style="color:#719e07">.</span>info(<span style="color:#2aa198">f</span><span style="color:#2aa198">&#39;Skipped sensor </span><span style="color:#2aa198">{</span>data_name<span style="color:#2aa198">}</span><span style="color:#2aa198">, as it wasn</span><span style="color:#cb4b16">\&#39;</span><span style="color:#2aa198">t in the list of data keys offered: &#39;</span>
+</span></span><span style="display:flex;"><span>                                  <span style="color:#2aa198">f</span><span style="color:#2aa198">&#39;</span><span style="color:#2aa198">{</span><span style="color:#2aa198">&#34;,&#34;</span><span style="color:#719e07">.</span>join(data<span style="color:#719e07">.</span>keys())<span style="color:#2aa198">}</span><span style="color:#2aa198">&#39;</span>)
+</span></span><span style="display:flex;"><span>                        <span style="color:#719e07">continue</span>
+</span></span><span style="display:flex;"><span>                    attributes <span style="color:#719e07">=</span> sensor[<span style="color:#2aa198">&#39;attributes&#39;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                    device_class <span style="color:#719e07">=</span> attributes<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#39;device_class&#39;</span>, <span style="color:#2aa198">&#39;unk&#39;</span>)
+</span></span><span style="display:flex;"><span>                    <span style="color:#719e07">if</span> <span style="color:#2aa198">&#39;friendly_name&#39;</span> <span style="color:#719e07">not</span> <span style="color:#719e07">in</span> attributes<span style="color:#719e07">.</span>keys():
+</span></span><span style="display:flex;"><span>                        attributes[<span style="color:#2aa198">&#39;friendly_name&#39;</span>] <span style="color:#719e07">=</span> <span style="color:#2aa198">f</span><span style="color:#2aa198">&#39;</span><span style="color:#2aa198">{</span>friendly_name_prefix<span style="color:#2aa198">}</span><span style="color:#2aa198"> </span><span style="color:#2aa198">{</span>device_class<span style="color:#719e07">.</span>title()<span style="color:#2aa198">}</span><span style="color:#2aa198">&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                    hass<span style="color:#719e07">.</span>set_state(
+</span></span><span style="display:flex;"><span>                        device_name<span style="color:#719e07">=</span><span style="color:#2aa198">f</span><span style="color:#2aa198">&#39;sensor.rf_</span><span style="color:#2aa198">{</span>name<span style="color:#2aa198">}</span><span style="color:#2aa198">_</span><span style="color:#2aa198">{</span>device_class<span style="color:#2aa198">}</span><span style="color:#2aa198">&#39;</span>,
+</span></span><span style="display:flex;"><span>                        data<span style="color:#719e07">=</span>{<span style="color:#2aa198">&#39;state&#39;</span>: data[data_name]},
+</span></span><span style="display:flex;"><span>                        attributes<span style="color:#719e07">=</span>attributes
+</span></span><span style="display:flex;"><span>                    )
+</span></span><span style="display:flex;"><span>                mappings[dev_id][<span style="color:#2aa198">&#39;last_update&#39;</span>] <span style="color:#719e07">=</span> <span style="color:#b58900">int</span>(datetime<span style="color:#719e07">.</span>now()<span style="color:#719e07">.</span>timestamp())
+</span></span><span style="display:flex;"><span>        <span style="color:#719e07">else</span>:
+</span></span><span style="display:flex;"><span>            logger<span style="color:#719e07">.</span>info(<span style="color:#2aa198">f</span><span style="color:#2aa198">&#39;Unknown device found: </span><span style="color:#2aa198">{</span>dev_model<span style="color:#2aa198">}</span><span style="color:#2aa198">: (</span><span style="color:#2aa198">{</span>dev_id<span style="color:#2aa198">}</span><span style="color:#2aa198">)</span><span style="color:#cb4b16">\n</span><span style="color:#2aa198">&#39;</span>
+</span></span><span style="display:flex;"><span>                      <span style="color:#2aa198">f</span><span style="color:#2aa198">&#39;</span><span style="color:#2aa198">{</span>json<span style="color:#719e07">.</span>dumps(data, indent<span style="color:#719e07">=</span><span style="color:#2aa198">2</span>)<span style="color:#2aa198">}</span><span style="color:#2aa198">&#39;</span>)
+</span></span><span style="display:flex;"><span>            unknown_devs_df <span style="color:#719e07">=</span> pd<span style="color:#719e07">.</span>concat([unknown_devs_df, pd<span style="color:#719e07">.</span>DataFrame(data, index<span style="color:#719e07">=</span>[<span style="color:#2aa198">0</span>])])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#719e07">if</span> last_dt <span style="color:#719e07">!=</span> datetime<span style="color:#719e07">.</span>now()<span style="color:#719e07">.</span>date() <span style="color:#719e07">and</span> unknown_devs_df<span style="color:#719e07">.</span>shape[<span style="color:#2aa198">0</span>] <span style="color:#719e07">&gt;</span> <span style="color:#2aa198">0</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#586e75"># Report on found unknown devices</span>
+</span></span><span style="display:flex;"><span>        logger<span style="color:#719e07">.</span>debug(<span style="color:#2aa198">f</span><span style="color:#2aa198">&#39;Saving </span><span style="color:#2aa198">{</span>unknown_devs_df<span style="color:#719e07">.</span>shape[<span style="color:#2aa198">0</span>]<span style="color:#2aa198">}</span><span style="color:#2aa198"> unknown devs to file...&#39;</span>)
+</span></span><span style="display:flex;"><span>        unknown_devs_df<span style="color:#719e07">.</span>to_csv(unknown_devs_file, index<span style="color:#719e07">=</span><span style="color:#cb4b16">False</span>, sep<span style="color:#719e07">=</span><span style="color:#2aa198">&#39;;&#39;</span>, mode<span style="color:#719e07">=</span><span style="color:#2aa198">&#39;a&#39;</span>)
+</span></span><span style="display:flex;"><span>        logger<span style="color:#719e07">.</span>debug(<span style="color:#2aa198">&#39;Resetting unknown device df.&#39;</span>)
+</span></span><span style="display:flex;"><span>        unknown_devs_df <span style="color:#719e07">=</span> pd<span style="color:#719e07">.</span>DataFrame()
+</span></span><span style="display:flex;"><span>        unknown_devs_file <span style="color:#719e07">=</span> DATA_DIR<span style="color:#719e07">.</span>joinpath(<span style="color:#2aa198">f</span><span style="color:#2aa198">&#39;unknown_devs_</span><span style="color:#2aa198">{</span>datetime<span style="color:#719e07">.</span>today()<span style="color:#2aa198">:</span><span style="color:#2aa198">%F</span><span style="color:#2aa198">}</span><span style="color:#2aa198">.csv&#39;</span>)
+</span></span><span style="display:flex;"><span>        last_dt <span style="color:#719e07">=</span> datetime<span style="color:#719e07">.</span>now()<span style="color:#719e07">.</span>date()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>logger<span style="color:#719e07">.</span>debug(<span style="color:#2aa198">&#39;Collection ended.&#39;</span>)</span></span></code></pre>
+</figure><p>Ok, that last file was a lot to break down. Stay with me here! Here&rsquo;s an overview of the process:</p>
+<ol>
+<li>First, we&rsquo;re going to read in a YAML (think: a more flexible cousin of the CSV) file with all the known device IDs for the sensors we&rsquo;re interested in</li>
+<li>Next, we also want to track unknown devices just in case we&rsquo;re missing out on any other devices nearby sending us interesting data. This info will be stored in a separate CSV. It&rsquo;s not important to the process, but might yield some neat info we can later decide to incorporate</li>
+<li>We connect to the streaming daemon and listen for data it sends our way. To avoid losing data, we wrap this listening service in a <code>GracefulKiller</code> class that equally listens for a signal from the machine that tells the process to kindly stop immediately. It&rsquo;s like having the waitstaff at a Waffle House politely ask you to get down from the table before actually calling the cops (AKA the program is able to end &lsquo;gracefully&rsquo; and not be stopped abruptly by the system, which could result in malformed data!).</li>
+<li>If we actually get data that&rsquo;s not empty (<code>if data is not None</code>), we start to process the details of the signal we received. Most devices will include in the payload things like the device id, the time it was sent, the model, etc.</li>
+<li>Having the device id, we look up the id to see if it&rsquo;s one that we care about. If it is, we proceed with the regular process. If it isn&rsquo;t, we just throw all the details we received about this device into the &ldquo;unknown_devices&rdquo; bin (so to speak)</li>
+<li>Assuming the device is one we care about, we retrieve details about it from our mapping. One of the details is when we last collected info about this device. We clearly don&rsquo;t need to know every single instance that this device transmits to us. Rather, we want to capture these details over time. Knowing that, we&rsquo;re going to verify that we haven&rsquo;t collected data from this device within the last <code>interval_s</code> seconds. Assuming that&rsquo;s <code>True</code>, we proceed&hellip;</li>
+<li>&hellip;and prepare a new payload to forward the data to whatever place we want to send it. In this example, we&rsquo;re sending the data onward to HomeAssistant, where the devices exist as sensors. We process the sensors&rsquo; data for both temp and humidity and forward along so that they can be used in the HomeAssistant dashboard &amp; automations.</li>
+<li>All that&rsquo;s remaining is for us to unload the &ldquo;unknown_devices&rdquo; bin every once in a while. You want to make sure you dump data like this relatively frequently to avoid a gradual buildup of unimportant data stored in memory. For a long-running process like this, that&rsquo;s a real risk, though granted we&rsquo;re only talking about tens of unknown devices.</li>
+</ol>
+<p><em>&laquo;takes a deep breath&raquo;</em> That&rsquo;s it!</p>
+<p>Now that we&rsquo;ve written out the scripts, how do we go about actually daemonizing these?</p>
+<h3 id="the-power-of-chmod-compels-you---or-daemonizing-your-scripts-with-a-service-file">The Power of <code>chmod</code> Compels You - Or, Daemonizing Your Scripts With a Service File</h3>
+<p>Daemonization isn&rsquo;t actually that hard. You just need to create what&rsquo;s essentially a config file, move it to the right spot and then &lsquo;register&rsquo; it with your machine so it knows where &amp; how to run the script associated with the daemon. Note, though, that this isn&rsquo;t the only way to daemonize scripts.</p>
+<p>First off, let&rsquo;s create our &lsquo;config&rsquo; file. Here&rsquo;s a template for ya:</p>
+<figure class="highlight codeblock">
+  <figcaption><span>example_rf_collect.service</span> </figcaption>
+  <pre tabindex="0" class="chroma"><code class="language-service" data-lang="service"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050"> 1</span><span><span style="color:#719e07">[Unit]</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050"> 2</span><span>Description<span style="color:#719e07">=</span><span style="color:#2aa198">RTL 433 Data Collection Service</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050"> 3</span><span>After<span style="color:#719e07">=</span><span style="color:#2aa198">multi-user.target</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050"> 4</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050"> 5</span><span><span style="color:#719e07">[Service]</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050"> 6</span><span>User<span style="color:#719e07">=</span><span style="color:#2aa198">&lt;user&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050"> 7</span><span>Group<span style="color:#719e07">=</span><span style="color:#2aa198">&lt;user&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050"> 8</span><span>Type<span style="color:#719e07">=</span><span style="color:#2aa198">idle</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050"> 9</span><span>ExecStart<span style="color:#719e07">=</span><span style="color:#2aa198">/path/to/your/venv/bin/python3 /path/to/your/project/collect/rf_collect.py</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">10</span><span>WorkingDirectory<span style="color:#719e07">=</span><span style="color:#2aa198">/path/to/your/project</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">11</span><span>Restart<span style="color:#719e07">=</span><span style="color:#2aa198">on-failure</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">12</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">13</span><span><span style="color:#719e07">[Install]</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">14</span><span>WantedBy<span style="color:#719e07">=</span><span style="color:#2aa198">multi-user.target</span></span></span></code></pre>
+</figure><p>Next, we&rsquo;re going to copy that file from wherever it is to where the system expects it to be by default</p>
+<figure class="highlight codeblock">
+  <pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sudo cp /path/to/example_rf_collect.service /lib/systemd/system/example_rf_collect.service</span></span></code></pre>
+</figure><p>Then, we&rsquo;ll change the permissions so only the owner can read/write, but others can only read</p>
+<figure class="highlight codeblock">
+  <pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sudo chmod <span style="color:#2aa198">644</span> /lib/systemd/system/example_rf_collect.service</span></span></code></pre>
+</figure><p>Last, we&rsquo;re going to refresh the process that controls the daemon &lsquo;registry&rsquo; so that it can &lsquo;see&rsquo; the new service config, then we&rsquo;re going to hook it so that it will run after the machine boots. This is a key benefit of running a daemon, as you wouldn&rsquo;t need to remember to run the script.</p>
+<figure class="highlight codeblock">
+  <pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sudo systemctl daemon-reload
+</span></span><span style="display:flex;"><span>sudo systemctl <span style="color:#b58900">enable</span> /lib/systemd/system/example_rf_collect.service</span></span></code></pre>
+</figure><p>Repeat the above sequence for the other service file and then we&rsquo;re ready to move on!</p>
+<h3 id="starting-the-daemons">Starting the Daemons</h3>
+<p>Once we&rsquo;re ready, we just start the daemons by referring to only their file name (since they&rsquo;re now registered).</p>
+<figure class="highlight codeblock">
+  <pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sudo systemctl start example_rf_collect.service</span></span></code></pre>
+</figure><p>If you have issues, you can always check on the status of the service with:</p>
+<figure class="highlight codeblock">
+  <pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sudo systemctl status example_rf_collect.service</span></span></code></pre>
+</figure><p>&hellip;or stop the service entirely with</p>
+<figure class="highlight codeblock">
+  <pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sudo systemctl stop example_rf_collect.service</span></span></code></pre>
+</figure><p>You can also check your log output with</p>
+<figure class="highlight codeblock">
+  <pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sudo journalctl -u example_rf_collect.service -f -n <span style="color:#2aa198">100</span></span></span></code></pre>
+</figure><ul>
+<li><code>-u</code> filters on the service</li>
+<li><code>-f</code> initiates &rsquo;tail&rsquo; mode, where you continuously get new entries as they&rsquo;re received</li>
+<li><code>-n</code> renders the last N lines of the logs received</li>
+</ul>
+<p>Last, you can also run the script itself (from <code>ExecStart</code>) in your own terminal to make sure it&rsquo;s functioning properly if you have any issues with the service not starting properly:</p>
+<figure class="highlight codeblock">
+  <pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>/path/to/your/venv/bin/python3 /path/to/your/project/collect/rf_collect.py</span></span></code></pre>
+</figure><h3 id="conclusion">Conclusion</h3>
+<p>So this is just one way of how to build your own sensor network without having to buy in to a single manufacturer&rsquo;s realm of devices.</p>
+<p>After running this script for a few days, I noticed a lot of nearby, unknown devices that my radio was also picking up:</p>
+<ul>
+<li>Other people&rsquo;s temp sensors (most were the kind that are connected to the displays and typically placed near a window)</li>
+<li>Various Tire Pressure Monitoring System (TPMS) sensors</li>
+<li>A few door &amp; window sensors that would send new status updates when opened or closed (!!)</li>
+<li>A single unknown device that I wasn&rsquo;t quite sure what it actually did, but it sent a serial number of sorts as its only payload</li>
+</ul>
+<p>Here&rsquo;s hoping my documentation of this is found helpful by someone. If you spot any errors in my above attempts at communicating any concept, feel free to reach out! I&rsquo;d be happy to correct my details.</p>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+      <footer class="site-footer">
+
+      </footer>
+    </main>
+    <div id="hidden-stats" style="display: none"></div>
+    <script defer>
+      var t = setInterval(function () {
+        if (window.goatcounter && window.goatcounter.visit_count) {
+          clearInterval(t)
+          window.goatcounter.visit_count({append: '#hidden-stats'})
+          let d = document.getElementById("hidden-stats");
+          let views = parseInt(d.innerHTML);
+          console.log("Total views: ", views);
+        }
+      }, 500)
+    </script>
+    
+  </body>
+</html>
