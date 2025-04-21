@@ -1,5 +1,5 @@
 ---
-date: '2025-04-20T10:35:08-05:00'
+date: '2021-02-15T10:35:08-05:00'
 lastmod: '2025-04-20T10:35:08-05:00'
 draft: false
 title: 'Automating Water Meter Reads in the Laziest Way'
