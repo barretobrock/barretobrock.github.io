@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Garden on Standard Output</title>
-    <link>https://www.bobrock.dev/tags/garden/</link>
+    <link>http://localhost:1313/tags/garden/</link>
     <description>Recent content in Garden on Standard Output</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 18 Apr 2025 13:05:13 -0500</lastBuildDate>
-    <atom:link href="https://www.bobrock.dev/tags/garden/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/garden/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>DIY Sprinkler Pt 1</title>
-      <link>https://www.bobrock.dev/posts/diy-sprinkler-pt-1/</link>
+      <link>http://localhost:1313/posts/diy-sprinkler-pt-1/</link>
       <pubDate>Sun, 09 Jul 2023 13:05:13 -0500</pubDate>
-      <guid>https://www.bobrock.dev/posts/diy-sprinkler-pt-1/</guid>
+      <guid>http://localhost:1313/posts/diy-sprinkler-pt-1/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;images/circuit-1.png&#34; alt=&#34;Circuit&#34;&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;motivation-for-this-project&#34;&gt;Motivation for this project&lt;/h3&gt;&#xA;&lt;p&gt;Shortly after moving in to my current place, I reasoned that I needed an irrigation system to coordinate the occasional drip irrigation to my (mostly native) plants. In this part of Texas, droughts aren&amp;rsquo;t really uncommon, unfortunately, so having this system set up would help provide some stability to the plants while not being much of a strain on my personal bandwidth to water the lawn, as well as the local water district&amp;rsquo;s. Perhaps it goes without saying, but precisely applying water to plants where &amp;amp; when they need it instead of just spraying in their general direction goes a long way towards helping to conserve water while also keeping plants happy.&lt;/p&gt;</description>
     </item>
   </channel>

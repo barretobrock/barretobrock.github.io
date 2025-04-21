@@ -60,3 +60,6 @@ menu_item_separator = '-'
           enable = true
   [markup.highlight]
     style = 'solarized-dark'
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
