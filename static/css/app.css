@@ -140,6 +140,14 @@ footer {
   100% {color: var(--txt-code)}
 }
 
+.meta-item:not(:first-child) {
+  padding-left: 5px;
+}
+
+.meta-item-desc {
+  padding-left: 3px;
+}
+
 :root {
   --txt-code: #57cc8a;
   --txt-green: #00ff6f;

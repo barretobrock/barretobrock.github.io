@@ -1,0 +1,13 @@
+<span id="{{ .File.UniqueID }}" class="meta-item-desc" title="Views"></span>
+<script>
+    window.addEventListener('load', function () {
+        let randcnt = Math.floor(Math.random() * 100) + 1;
+        document.getElementById('{{ .File.UniqueID }}').innerText = randcnt + ' views';
+    })
+    var r = new XMLHttpRequest();
+    r.addEventListener('load', function() {
+        document.getElementById('{{ .File.UniqueID }}').innerText = JSON.parse(this.responseText).count_unique + ' views'
+    })
+    r.open('GET', "https://{{ .Site.Params.goatcounter }}.goatcounter.com/counter/" + encodeURIComponent({{ .RelPermalink }}.replace(/(\/)?$/, '')) + '.json')
+    r.send()
+</script> {{- /* Trim EOF */ -}}

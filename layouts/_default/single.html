@@ -12,41 +12,51 @@
       {{- if ne .Type "page" }}
         <div class="post-meta">
           <div>
-            {{ partial "icon.html" (dict "ctx" $ "name" "calendar") }}
-            <span>Published: </span>
-            {{ $published_date }}
-          </div>
-          {{ if ne $published_date $modified_date }}
-            <div>
+            <span class="meta-item">
               {{ partial "icon.html" (dict "ctx" $ "name" "calendar") }}
-              <span>Edited:   </span>
-              {{ $modified_date }}
-            </div>
-          {{ end }}
-          <div>
-            {{ partial "icon.html" (dict "ctx" $ "name" "clock") }}
-            {{ .ReadingTime }} min read
+              <span>Published: </span>
+              {{ $published_date }}
+            </span>
+            {{ if ne $published_date $modified_date }}
+              <span class="meta-item">
+                {{ partial "icon.html" (dict "ctx" $ "name" "calendar") }}
+                <span>Edited:   </span>
+                {{ $modified_date }}
+              </span>
+            {{ end }}
+            <span class="meta-item">
+              {{ partial "icon.html" (dict "ctx" $ "name" "clock") }}
+              {{ .ReadingTime }} min read
+            </span>
+            {{ if and (.Params.ShowPageViews | default (.Site.Params.ShowPageViews | default true)) }}
+              <span class="meta-item">
+                {{ partial "icon.html" (dict "ctx" $ "name" "eye") }}
+                {{- partial "page_views.html" . -}}
+              </span>
+            {{ end }}
           </div>
-          {{- with .Params.tags }}
           <div>
-            {{ partial "icon.html" (dict "ctx" $ "name" "tag") }}
-            {{- range . -}}
-              {{ with $.Site.GetPage (printf "/%s/%s" "tags" . ) }}
-                <a class="tag" href="{{ .RelPermalink }}">{{ .Title }}</a>
-              {{- end }}
+            {{- with .Params.tags }}
+              <span class="meta-item">
+                {{ partial "icon.html" (dict "ctx" $ "name" "tag") }}
+                {{- range . -}}
+                  {{ with $.Site.GetPage (printf "/%s/%s" "tags" . ) }}
+                    <a class="tag" href="{{ .RelPermalink }}">{{ .Title }}</a>
+                  {{- end }}
+                {{- end }}
+              </span>
+            {{- end }}
+            {{- with .Params.categories }}
+              <span class="meta-item">
+                {{ partial "icon.html" (dict "ctx" $ "name" "bookmark") }}
+                {{- range . -}}
+                  {{ with $.Site.GetPage (printf "/%s/%s" "categories" . ) }}
+                    <a class="tag" href="{{ .RelPermalink }}">{{ .Title }}</a>
+                  {{- end }}
+                {{- end }}
+              </span>
             {{- end }}
           </div>
-          {{- end }}
-          {{- with .Params.categories }}
-          <div>
-            {{ partial "icon.html" (dict "ctx" $ "name" "bookmark") }}
-            {{- range . -}}
-              {{ with $.Site.GetPage (printf "/%s/%s" "categories" . ) }}
-                <a class="tag" href="{{ .RelPermalink }}">{{ .Title }}</a>
-              {{- end }}
-            {{- end }}
-          </div>
-          {{- end }}
         </div>
       {{- end }}
     </header>

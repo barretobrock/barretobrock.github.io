@@ -2,59 +2,59 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://www.bobrock.dev/tags/announcement/</loc>
+    <loc>http://localhost:1313/tags/announcement/</loc>
     <lastmod>2025-04-18T12:45:50-05:00</lastmod>
   </url><url>
-    <loc>https://www.bobrock.dev/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
     <lastmod>2025-04-20T10:35:08-05:00</lastmod>
   </url><url>
-    <loc>https://www.bobrock.dev/categories/general/</loc>
+    <loc>http://localhost:1313/categories/general/</loc>
     <lastmod>2025-04-18T12:45:50-05:00</lastmod>
   </url><url>
-    <loc>https://www.bobrock.dev/posts/new-blog/</loc>
+    <loc>http://localhost:1313/posts/new-blog/</loc>
     <lastmod>2025-04-18T12:45:50-05:00</lastmod>
   </url><url>
-    <loc>https://www.bobrock.dev/posts/</loc>
+    <loc>http://localhost:1313/posts/</loc>
     <lastmod>2025-04-20T10:35:08-05:00</lastmod>
   </url><url>
-    <loc>https://www.bobrock.dev/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2025-04-20T10:35:08-05:00</lastmod>
   </url><url>
-    <loc>https://www.bobrock.dev/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2025-04-20T10:35:08-05:00</lastmod>
   </url><url>
-    <loc>https://www.bobrock.dev/posts/diy-sprinkler-pt-1/</loc>
+    <loc>http://localhost:1313/posts/diy-sprinkler-pt-1/</loc>
     <lastmod>2025-04-18T13:05:13-05:00</lastmod>
   </url><url>
-    <loc>https://www.bobrock.dev/series/diy-sprinkler/</loc>
+    <loc>http://localhost:1313/series/diy-sprinkler/</loc>
     <lastmod>2025-04-18T13:05:13-05:00</lastmod>
   </url><url>
-    <loc>https://www.bobrock.dev/tags/garden/</loc>
+    <loc>http://localhost:1313/tags/garden/</loc>
     <lastmod>2025-04-18T13:05:13-05:00</lastmod>
   </url><url>
-    <loc>https://www.bobrock.dev/categories/home-automation/</loc>
+    <loc>http://localhost:1313/categories/home-automation/</loc>
     <lastmod>2025-04-20T10:35:08-05:00</lastmod>
   </url><url>
-    <loc>https://www.bobrock.dev/tags/projects/</loc>
+    <loc>http://localhost:1313/tags/projects/</loc>
     <lastmod>2025-04-20T10:35:08-05:00</lastmod>
   </url><url>
-    <loc>https://www.bobrock.dev/series/</loc>
+    <loc>http://localhost:1313/series/</loc>
     <lastmod>2025-04-18T13:05:13-05:00</lastmod>
   </url><url>
-    <loc>https://www.bobrock.dev/posts/practical-intro-sdr/</loc>
+    <loc>http://localhost:1313/posts/practical-intro-sdr/</loc>
     <lastmod>2025-04-20T10:32:46-05:00</lastmod>
   </url><url>
-    <loc>https://www.bobrock.dev/tags/python/</loc>
+    <loc>http://localhost:1313/tags/python/</loc>
     <lastmod>2025-04-20T10:35:08-05:00</lastmod>
   </url><url>
-    <loc>https://www.bobrock.dev/posts/water-meter-reading-automation/</loc>
+    <loc>http://localhost:1313/posts/water-meter-reading-automation/</loc>
     <lastmod>2025-04-20T10:35:08-05:00</lastmod>
   </url><url>
-    <loc>https://www.bobrock.dev/tags/raspberry-pi/</loc>
+    <loc>http://localhost:1313/tags/raspberry-pi/</loc>
     <lastmod>2025-04-20T10:35:08-05:00</lastmod>
   </url><url>
-    <loc>https://www.bobrock.dev/about/</loc>
+    <loc>http://localhost:1313/about/</loc>
   </url><url>
-    <loc>https://www.bobrock.dev/tags/intro/</loc>
+    <loc>http://localhost:1313/tags/intro/</loc>
   </url>
 </urlset>

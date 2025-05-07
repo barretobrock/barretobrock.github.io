@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en-us">
-  <head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <title>Getting the Blog Back Together // Standard Output</title>
     <link rel="shortcut icon" href="/favicon.ico" />
     <meta charset="utf-8" />
@@ -66,23 +66,51 @@
       <h1 class ="post-title">Getting the Blog Back Together</h1>
         <div class="post-meta">
           <div>
-            <svg class="icon icon-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>calendar</title><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-            <span>Published: </span>
-            Apr 18, 2025
+            <span class="meta-item">
+              <svg class="icon icon-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>calendar</title><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+              <span>Published: </span>
+              Apr 18, 2025
+            </span>
+            
+            <span class="meta-item">
+              <svg class="icon icon-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>clock</title><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              1 min read
+            </span>
+            
+              <span class="meta-item">
+                <svg class="icon icon-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>eye</title><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg><span id="4156f043fbcba7c13db0a5bedfffc3cf" title="Views"></span>
+<script>
+    var r = new XMLHttpRequest();
+    let cnt = 0;
+    r.addEventListener('load', function() {
+      
+      console.log("Number of counts: ", cnt);
+        document.getElementById('4156f043fbcba7c13db0a5bedfffc3cf').innerText =  + ' views'
+    })
+    try {
+      r.open('GET', "https://bobrockdev.goatcounter.com/counter/" + encodeURIComponent("/posts/new-blog/".replace(/(\/)?$/, '')) + '.json')
+      r.send()
+    } catch (e) {
+      console.log("oopsie!")
+
+    }
+</script></span>
+            
           </div>
-          
           <div>
-            <svg class="icon icon-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>clock</title><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-            1 min read
+              <span class="meta-item">
+                <svg class="icon icon-tag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>tag</title><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+                    <a class="tag" href="/tags/announcement/">Announcement</a>
+              </span>
+              <span class="meta-item">
+                <svg class="icon icon-bookmark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>bookmark</title><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+                    <a class="tag" href="/categories/general/">General</a>
+              </span>
           </div>
-          <div>
-            <svg class="icon icon-tag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>tag</title><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
-                <a class="tag" href="/tags/announcement/">Announcement</a>
-          </div>
-          <div>
-            <svg class="icon icon-bookmark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>bookmark</title><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
-                <a class="tag" href="/categories/general/">General</a>
-          </div>
+
+
+
+
         </div>
     </header>
     
@@ -104,7 +132,7 @@
       <span>
         &copy;
         2025
-        <a href="https://www.bobrock.dev/">Standard Output</a>
+        <a href="http://localhost:1313/">Standard Output</a>
       </span><span style="display: inline-block; margin-left: 1em;">
         <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a>
     </span>
