@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Standard Output</title>
-    <link>http://localhost:1313/posts/</link>
+    <link>https://www.bobrock.dev/posts/</link>
     <description>Recent content in Posts on Standard Output</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 20 Apr 2025 10:35:08 -0500</lastBuildDate>
-    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Automating Water Meter Reads in the Laziest Way</title>
-      <link>http://localhost:1313/posts/water-meter-reading-automation/</link>
-      <pubDate>Sun, 20 Apr 2025 10:35:08 -0500</pubDate>
-      <guid>http://localhost:1313/posts/water-meter-reading-automation/</guid>
-      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;This post is a recollection of a project that took place about 13 years ago, so details might be hazy and the actual implementation might be either easier or more involved, depending on the tech used.&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;h3 id=&#34;preamble&#34;&gt;Preamble&lt;/h3&gt;&#xA;&lt;p&gt;Back in the day, my apartment had hot &amp;amp; cold water meters mounted above the ceiling of my bathroom that served as the water meters for the whole place. The ceiling had these tiles you&amp;rsquo;d remove&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; in order to access the area where the meters were stored, so it wasn&amp;rsquo;t like the meters were immediately visible when you step into the bathroom. It was my task, at the beginning of every month, to grab a chair, lift up one of the ceiling tiles, and record the numbers on the water meters to then send it to the building&amp;rsquo;s maintenance team who also handled billing for utilities. This was a few years before the maintenance team swapped out these manual meters for the more convenient ones that transmitted their data wirelessly to a nearby device, so there was no going around the manual inspection of the gauges.&lt;/p&gt;</description>
-    </item>
+    <atom:link href="https://www.bobrock.dev/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Getting the Blog Back Together</title>
-      <link>http://localhost:1313/posts/new-blog/</link>
+      <link>https://www.bobrock.dev/posts/new-blog/</link>
       <pubDate>Fri, 18 Apr 2025 12:45:50 -0500</pubDate>
-      <guid>http://localhost:1313/posts/new-blog/</guid>
+      <guid>https://www.bobrock.dev/posts/new-blog/</guid>
       <description>&lt;p&gt;I&amp;rsquo;m taking some time off of work to focus on some passions of mine. One of them is disseminating information to others eager to learn. While I fully understand that nowadays a personal blog in a custom domain is essentially the backwaters of the SEO-driven internet these days, but my reasoning is less that someone may find this and more that I may be able to more readily link to things I&amp;rsquo;ve done in the past to share to Internet People&lt;sup&gt;TM&lt;/sup&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>DIY Sprinkler Pt 1</title>
-      <link>http://localhost:1313/posts/diy-sprinkler-pt-1/</link>
+      <link>https://www.bobrock.dev/posts/diy-sprinkler-pt-1/</link>
       <pubDate>Sun, 09 Jul 2023 13:05:13 -0500</pubDate>
-      <guid>http://localhost:1313/posts/diy-sprinkler-pt-1/</guid>
+      <guid>https://www.bobrock.dev/posts/diy-sprinkler-pt-1/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;images/circuit-1.png&#34; alt=&#34;Circuit&#34;&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;motivation-for-this-project&#34;&gt;Motivation for this project&lt;/h3&gt;&#xA;&lt;p&gt;Shortly after moving in to my current place, I reasoned that I needed an irrigation system to coordinate the occasional drip irrigation to my (mostly native) plants. In this part of Texas, droughts aren&amp;rsquo;t really uncommon, unfortunately, so having this system set up would help provide some stability to the plants while not being much of a strain on my personal bandwidth to water the lawn, as well as the local water district&amp;rsquo;s. Perhaps it goes without saying, but precisely applying water to plants where &amp;amp; when they need it instead of just spraying in their general direction goes a long way towards helping to conserve water while also keeping plants happy.&lt;/p&gt;</description>
     </item>
     <item>
       <title>A Practical Intro to SDR and Daemonization</title>
-      <link>http://localhost:1313/posts/practical-intro-sdr/</link>
+      <link>https://www.bobrock.dev/posts/practical-intro-sdr/</link>
       <pubDate>Fri, 01 Apr 2022 00:00:00 -0500</pubDate>
-      <guid>http://localhost:1313/posts/practical-intro-sdr/</guid>
+      <guid>https://www.bobrock.dev/posts/practical-intro-sdr/</guid>
       <description>&lt;p&gt;Software-defined radios (SDR) are an amazing thing. Without turning any knobs or sliding any sliders, you&amp;rsquo;re often able to adjust the radio frequency with just a few commands to the machine that&amp;rsquo;s connected to the device. While typically you can use SDR to not only receive signals, but also transmit, this post will cover just a very basic, but hopefully practical, intro into using SDR.&lt;/p&gt;&#xA;&lt;h3 id=&#34;why-do-this&#34;&gt;Why do this?&lt;/h3&gt;&#xA;&lt;p&gt;We have a lot of ways to gather data around the house these days. The data I&amp;rsquo;ve generally been the most interested in for the longest time has been temperature. There are a lot of great temp sensors one can procure for various device systems these days. A lot of companies that are temp data adjacent will even offer sensors that interface with their devices: My HVAC controller offers this, as does many other manufacturers in that realm and the general home automation realm. It&amp;rsquo;s both neat and seemingly relieving to know that there&amp;rsquo;s so many options to choose from.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Automating Water Meter Reads in the Laziest Way</title>
+      <link>https://www.bobrock.dev/posts/water-meter-reading-automation/</link>
+      <pubDate>Mon, 15 Feb 2021 10:35:08 -0500</pubDate>
+      <guid>https://www.bobrock.dev/posts/water-meter-reading-automation/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;This post is a recollection of a project that took place about 13 years ago, so details might be hazy and the actual implementation might be either easier or more involved, depending on the tech used.&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;h3 id=&#34;preamble&#34;&gt;Preamble&lt;/h3&gt;&#xA;&lt;p&gt;Back in the day, my apartment had hot &amp;amp; cold water meters mounted above the ceiling of my bathroom that served as the water meters for the whole place. The ceiling had these tiles you&amp;rsquo;d remove&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; in order to access the area where the meters were stored, so it wasn&amp;rsquo;t like the meters were immediately visible when you step into the bathroom. It was my task, at the beginning of every month, to grab a chair, lift up one of the ceiling tiles, and record the numbers on the water meters to then send it to the building&amp;rsquo;s maintenance team who also handled billing for utilities. This was a few years before the maintenance team swapped out these manual meters for the more convenient ones that transmitted their data wirelessly to a nearby device, so there was no going around the manual inspection of the gauges.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

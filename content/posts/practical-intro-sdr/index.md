@@ -1,11 +1,14 @@
-+++
-date = '2022-04-01T00:00:00-05:00'
-lastmod = '2025-04-20T10:32:46-05:00'
-draft = false
-title = 'A Practical Intro to SDR and Daemonization'
-tags = ['projects', 'python']
-categories = ['home-automation']
-+++
+---
+title: 'A Practical Intro to SDR and Daemonization'
+draft: false
+date: 2022-04-01T00:00:00-05:00
+lastmod: 2025-04-20T10:32:46-05:00
+tags: 
+  - projects
+  - python
+categories:
+  - home-automation
+---
 
 Software-defined radios (SDR) are an amazing thing. Without turning any knobs or sliding any sliders, you're often able to adjust the radio frequency with just a few commands to the machine that's connected to the device. While typically you can use SDR to not only receive signals, but also transmit, this post will cover just a very basic, but hopefully practical, intro into using SDR.
 

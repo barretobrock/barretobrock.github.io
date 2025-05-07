@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en-us">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head>
     <title>Automating Water Meter Reads in the Laziest Way // Standard Output</title>
     <link rel="shortcut icon" href="/favicon.ico" />
     <meta charset="utf-8" />
@@ -23,7 +23,7 @@
             async src="/js/count.js"></script>
 
   </head>
-  <body>
+  <body id="top">
     <header class="app-header">
       <a href="/"><img class="app-header-avatar" src="/avatar.png" alt="bobrock" /></a>
       <span class="app-header-title">Standard Output</span>
@@ -64,36 +64,62 @@
   <article class="post">
     <header class="post-header">
       <h1 class ="post-title">Automating Water Meter Reads in the Laziest Way</h1>
-      <div class="post-meta">
-        <div>
-          <svg class="icon icon-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>calendar</title><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-          <span>Published: </span>
-          Apr 20, 2025
+        <div class="post-meta">
+          <div>
+            <svg class="icon icon-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>calendar</title><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            <span>Published: </span>
+            Feb 15, 2021
+          </div>
+          
+            <div>
+              <svg class="icon icon-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>calendar</title><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+              <span>Edited:   </span>
+              Apr 20, 2025
+            </div>
+          
+          <div>
+            <svg class="icon icon-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>clock</title><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            7 min read
+          </div>
+          <div>
+            <svg class="icon icon-tag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>tag</title><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+                <a class="tag" href="/tags/projects/">Projects</a>
+                <a class="tag" href="/tags/raspberry-pi/">Raspberry-Pi</a>
+                <a class="tag" href="/tags/python/">Python</a>
+          </div>
+          <div>
+            <svg class="icon icon-bookmark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>bookmark</title><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+                <a class="tag" href="/categories/home-automation/">Home-Automation</a>
+          </div>
         </div>
-        
-        <div>
-          <svg class="icon icon-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>clock</title><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-          7 min read
-        </div>
-        <div>
-          <svg class="icon icon-tag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>tag</title><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
-              <a class="tag" href="/tags/projects/">Projects</a>
-              <a class="tag" href="/tags/raspberry-pi/">Raspberry-Pi</a>
-              <a class="tag" href="/tags/python/">Python</a>
-        </div>
-        <div>
-          <svg class="icon icon-bookmark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>bookmark</title><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
-              <a class="tag" href="/categories/home-automation/">Home-Automation</a>
-        </div>
-      </div>
     </header>
-    <div class="post-content">
-      <blockquote>
+    <div class="toc">
+    <details  open>
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#preamble" aria-label="Preamble">Preamble</a></li>
+                <li>
+                    <a href="#goals" aria-label="Goals">Goals</a></li>
+                <li>
+                    <a href="#implementation" aria-label="Implementation">Implementation</a></li>
+                <li>
+                    <a href="#conclusion" aria-label="Conclusion">Conclusion</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+    <div class="post-content"><blockquote>
 <p>This post is a recollection of a project that took place about 13 years ago, so details might be hazy and the actual implementation might be either easier or more involved, depending on the tech used.</p></blockquote>
-<h3 id="preamble">Preamble</h3>
+<h3 id="preamble">Preamble<a hidden class="anchor" aria-hidden="true" href="#preamble">¶</a></h3>
 <p>Back in the day, my apartment had hot &amp; cold water meters mounted above the ceiling of my bathroom that served as the water meters for the whole place. The ceiling had these tiles you&rsquo;d remove<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> in order to access the area where the meters were stored, so it wasn&rsquo;t like the meters were immediately visible when you step into the bathroom. It was my task, at the beginning of every month, to grab a chair, lift up one of the ceiling tiles, and record the numbers on the water meters to then send it to the building&rsquo;s maintenance team who also handled billing for utilities. This was a few years before the maintenance team swapped out these manual meters for the more convenient ones that transmitted their data wirelessly to a nearby device, so there was no going around the manual inspection of the gauges.</p>
 <p>Perhaps it goes without saying, but I quickly got tired of this task. I know it only happened once every month, but I&rsquo;m naturally a lazy person when faced with such a mundane task. Additionally, I&rsquo;m not the best at multi-tasking, especially when the tasks to juggle are balancing on a chair while trying not to fall and injure myself, observing numbers from a distance and then writing those numbers on a pad and remembering which numbers go to which meter. So, I sought out a means of automating all of this. I reasoned if I could just remove the need to get up into the tiled part of my ceiling, this would be a big win for productivity. Before I could really get to work on a solution, though, I need to define some goals&hellip;</p>
-<h3 id="goals">Goals</h3>
+<h3 id="goals">Goals<a hidden class="anchor" aria-hidden="true" href="#goals">¶</a></h3>
 <p>In order for this project to be a success and actually save me the time &amp; effort, it would need to:</p>
 <ul>
 <li>Last months with no interaction needed (&ldquo;vacation safe&rdquo;)</li>
@@ -101,7 +127,7 @@
 <li>Have a means of communicating the meter info in a consistently legible manner (no manual do-overs allowed)</li>
 <li>Communicate the meter info in a way that I&rsquo;m able to see it even when I&rsquo;m away from the apartment (in case I&rsquo;m on vacation)</li>
 </ul>
-<h3 id="implementation">Implementation</h3>
+<h3 id="implementation">Implementation<a hidden class="anchor" aria-hidden="true" href="#implementation">¶</a></h3>
 <p>For this project (and more importantly, during this particular time), I chose to go with something relatively low-power like a Raspberry Pi. I needed something that didn&rsquo;t consume a lot of energy, but something that could handle extracting an image through a camera. I think nowadays I&rsquo;d probably go with something even more lightweight like an ESP32 with a camera module.</p>
 <p>This was back before Raspberry Pis even had built-in WiFi modules, too, so I had to do some research about what WiFi USB dongle would best be compatible with the RasPi. Fortunately, that wasn&rsquo;t too hard of a task. Instead of purchasing the camera module that was best compatible with the RasPi, I opted for a cheaper solution and took an old USB webcam I had laying around. I figured if it turned difficult to get the RasPi to &lsquo;see&rsquo; the device, I could then purchase the actual camera module.</p>
 <p>Fortunately, after some tinkering, the camera module ended up working out just fine and I ended up writing a script that would take a pic and email it to me. I scheduled the script by using <code>crontab</code> in my Linux-flavored RasPi.</p>
@@ -120,7 +146,7 @@
 <p>Now this was an improvement! This solution lasted many months, perhaps even a year before I realized that I probably could crop it just a little bit more, stack the numbers on top of each other and (after yet more experimentation) convert it to greyscale, which seemed to help with reading the numbers from a cheap phone screen:</p>
 <p><img src="images/meters-5.jpg" alt="Shot of two closely cropped numbers in greyscale stacked on top of each other"></p>
 <p>This is the process that lasted for a few more years until the building maintenance team decided to swap out the meters for upgraded, remote-read capable ones.</p>
-<h3 id="conclusion">Conclusion</h3>
+<h3 id="conclusion">Conclusion<a hidden class="anchor" aria-hidden="true" href="#conclusion">¶</a></h3>
 <p>I look back fondly at this project. In many ways, it was my first practical home automation project. I had built temperature logging devices before this (and consequently written a bunch of temperature analysis &amp; correlation scripts in R), but this was the first project that actually made my life easier instead of the others that merely sought to uncover more data hidden in the world around me. Both pursuits were fun &amp; worthwhile, but this one in particular proved to me that there can be a very practical use with seemingly trivial devices if the need is there. This project led me to experiment more with writing in Python (before, I was still mainly writing in Visual Basic and R for work) - a programming language that I now use for the bulk of both work and personal projects. I&rsquo;m not sure if I owe my entire interest in Python programming to this project&rsquo;s success, but I&rsquo;m certain that it helped me find a way forward to exploring Python more in-depth.</p>
 <div class="footnotes" role="doc-endnotes">
 <hr>
@@ -132,27 +158,60 @@
 </div>
 
     </div>
-    <div class="post-footer">
-      
-    </div>
   </article>
+  
 
       <footer class="site-footer">
 
       </footer>
     </main>
-    <div id="hidden-stats" style="display: none"></div>
-    <script defer>
-      var t = setInterval(function () {
-        if (window.goatcounter && window.goatcounter.visit_count) {
-          clearInterval(t)
-          window.goatcounter.visit_count({append: '#hidden-stats'})
-          let d = document.getElementById("hidden-stats");
-          let views = parseInt(d.innerHTML);
-          console.log("Total views: ", views);
-        }
-      }, 500)
-    </script>
     
-  </body>
+
+<footer class="footer">
+      <span>
+        &copy;
+        2025
+        <a href="https://www.bobrock.dev/">Standard Output</a>
+      </span><span style="display: inline-block; margin-left: 1em;">
+        <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a>
+    </span>
+    <span style="display: inline-block; margin-left: 1em;">
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">
+            Hugo
+        </a>
+        &
+        <a href="https://github.com/vaga/hugo-theme-m10c" rel="noopener" target="_blank">
+            m10c.
+        </a>
+        <span>
+            Analytics by
+            <a href="https://bobrockdev.goatcounter.com">
+                Goatcounter.
+            </a>
+        </span>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top" class="top-link" id="top-link">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (
+            document.body.scrollTop > 800 ||
+            document.documentElement.scrollTop > 800
+        ) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+</script>
+
+</body>
 </html>

@@ -30,8 +30,11 @@ menu_item_separator = '-'
 [params]
     subtitle = 'The Blog of Bobrock'
     description = 'noli cedere cognoscere'
+    goatcounter = 'bobrockdev'
     avatar = '/avatar.png'
     favicon = '/favicon.ico'
+    showtoc = true
+    tocopen = true
     custom_css = ['/css/app.css']
     custom_js = ['/js/count.js'] # Leave out count.js, as that's to be retrieved specifically in head.
     [params.author]
@@ -47,6 +50,7 @@ menu_item_separator = '-'
 [taxonomies]
     category = 'categories'
     tag = 'tags'
+    series = 'series'
 [markup]
   [markup.goldmark]
     [markup.goldmark.extensions]

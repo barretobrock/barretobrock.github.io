@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en-us">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head>
     <title>DIY Sprinkler Pt 1 // Standard Output</title>
     <link rel="shortcut icon" href="/favicon.ico" />
     <meta charset="utf-8" />
@@ -23,7 +23,7 @@
             async src="/js/count.js"></script>
 
   </head>
-  <body>
+  <body id="top">
     <header class="app-header">
       <a href="/"><img class="app-header-avatar" src="/avatar.png" alt="bobrock" /></a>
       <span class="app-header-title">Standard Output</span>
@@ -64,37 +64,81 @@
   <article class="post">
     <header class="post-header">
       <h1 class ="post-title">DIY Sprinkler Pt 1</h1>
-      <div class="post-meta">
-        <div>
-          <svg class="icon icon-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>calendar</title><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-          <span>Published: </span>
-          Jul 9, 2023
-        </div>
-        
+        <div class="post-meta">
           <div>
             <svg class="icon icon-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>calendar</title><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-            <span>Edited:   </span>
-            Apr 18, 2025
+            <span>Published: </span>
+            Jul 9, 2023
           </div>
-        
-        <div>
-          <svg class="icon icon-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>clock</title><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-          8 min read
+          
+            <div>
+              <svg class="icon icon-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>calendar</title><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+              <span>Edited:   </span>
+              Apr 18, 2025
+            </div>
+          
+          <div>
+            <svg class="icon icon-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>clock</title><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            8 min read
+          </div>
+          <div>
+            <svg class="icon icon-tag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>tag</title><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+                <a class="tag" href="/tags/garden/">Garden</a>
+                <a class="tag" href="/tags/projects/">Projects</a>
+          </div>
+          <div>
+            <svg class="icon icon-bookmark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>bookmark</title><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+                <a class="tag" href="/categories/home-automation/">Home-Automation</a>
+          </div>
         </div>
-        <div>
-          <svg class="icon icon-tag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>tag</title><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
-              <a class="tag" href="/tags/projects/">Projects</a>
-              <a class="tag" href="/tags/garden/">Garden</a>
-        </div>
-        <div>
-          <svg class="icon icon-bookmark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>bookmark</title><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
-              <a class="tag" href="/categories/home-automation/">Home-Automation</a>
-        </div>
-      </div>
     </header>
-    <div class="post-content">
-      <p><img src="images/circuit-1.png" alt="Circuit"></p>
-<h3 id="motivation-for-this-project">Motivation for this project</h3>
+    <div class="toc">
+  <details
+    
+  >
+    <summary>
+      <b>diy-sprinkler - This post is part of a series.</b>
+    </summary>
+    <div class="inner">
+      <ul>
+        
+          
+            <li class="post">
+              2023-07-09 -
+              DIY Sprinkler Pt 1
+              <span class="series-place-indicator">You are here</span>
+            </li>
+          
+        
+      </ul>
+    </div>
+  </details>
+</div>
+    <div class="toc">
+    <details  open>
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#motivation-for-this-project" aria-label="Motivation for this project">Motivation for this project</a></li>
+                <li>
+                    <a href="#getting-started" aria-label="Getting started">Getting started</a></li>
+                <li>
+                    <a href="#assembling-the-pipes" aria-label="Assembling the pipes">Assembling the pipes</a></li>
+                <li>
+                    <a href="#building-the-anti-uv-box" aria-label="Building the anti-UV box">Building the anti-UV box</a></li>
+                <li>
+                    <a href="#giving-the-system-brains-aka-building-the-circuit" aria-label="Giving the system brains (AKA building the circuit)">Giving the system brains (AKA building the circuit)</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+    <div class="post-content"><p><img src="images/circuit-1.png" alt="Circuit"></p>
+<h3 id="motivation-for-this-project">Motivation for this project<a hidden class="anchor" aria-hidden="true" href="#motivation-for-this-project">¶</a></h3>
 <p>Shortly after moving in to my current place, I reasoned that I needed an irrigation system to coordinate the occasional drip irrigation to my (mostly native) plants. In this part of Texas, droughts aren&rsquo;t really uncommon, unfortunately, so having this system set up would help provide some stability to the plants while not being much of a strain on my personal bandwidth to water the lawn, as well as the local water district&rsquo;s. Perhaps it goes without saying, but precisely applying water to plants where &amp; when they need it instead of just spraying in their general direction goes a long way towards helping to conserve water while also keeping plants happy.</p>
 <p>As to whether I could have simply bought something to supplement these needs, I&rsquo;m sure the answer is a resounding &lsquo;yes&rsquo;. My main problem with going this route is that such products that would be readily available for purchase on sites like Amazon rarely have all the details I&rsquo;m looking for like:</p>
 <ul>
@@ -113,16 +157,16 @@
 <li>to allow for easy winterization (i.e., drain most of the water out of the exposed pipes)</li>
 <li>to easily accept future improvements</li>
 </ul>
-<h3 id="getting-started">Getting started</h3>
+<h3 id="getting-started">Getting started<a hidden class="anchor" aria-hidden="true" href="#getting-started">¶</a></h3>
 <p><img src="images/pipes-0.png" alt="Pipe fittings and valves on a concrete floor"></p>
 <p>The first thing I needed to figure out was materials needed. Using a garden hose for the whole thing may have been the easiest approach, but I had recently witnessed a garden hose get heated in the sun so much that part of its wall ruptured. It was probably a cheap hose, but I didn&rsquo;t want to go down the route of testing multiple hoses to see which one would work.</p>
 <p>I wanted to follow whatever standard there may be for this kind of thing. I read that <a href="https://en.wikipedia.org/wiki/Cross-linked_polyethylene">PEX</a> was often used in homes for distributing water, so I concluded that this was the way to go. I researched methodologies for connecting pipes, types of connectors and limitations with it. Seemingly the only issue with PEX in my application was that it was very sensitive to UV light. I&rsquo;d need to put whatever I build into a box.</p>
-<h3 id="assembling-the-pipes">Assembling the pipes</h3>
+<h3 id="assembling-the-pipes">Assembling the pipes<a hidden class="anchor" aria-hidden="true" href="#assembling-the-pipes">¶</a></h3>
 <p><img src="images/pipes-1.png" alt="Pipe fittings and valves connected together on a concrete floor"></p>
 <p>I read up on using the sharkbite fittings on pex and gave it a few dummy attempts before actually combining everything. You really needed to make sure that the crimping tool was perfectly lined up, otherwise the criming ring wouldn&rsquo;t be as tight of a hold on the pipe &amp; fitting.</p>
 <p><em>Note that I staggered the pipes, as the valve unit I chose for this had a pretty wide footprint, so staggering would reduce the need for expanding the box&rsquo;s overall footprint to accommodate for that.</em></p>
 <p>For the PEX -&gt; NPT fittings at the bottom and right, I wrapped the threads with pipe tape to ensure they&rsquo;re watertight. The little green unit on the right is a temporary water flow gauge I used to help with calibrating the digital flow meter later.</p>
-<h3 id="building-the-anti-uv-box">Building the anti-UV box</h3>
+<h3 id="building-the-anti-uv-box">Building the anti-UV box<a hidden class="anchor" aria-hidden="true" href="#building-the-anti-uv-box">¶</a></h3>
 <p><img src="images/box-0.png" alt="A wooden box made of four cedar planks with two 2x4s inside joined to a T shape "></p>
 <p>I started work on the box that would house the monstrosity of pipe fittings I had created. I cut out a hole in the side to allow for the flow meter and intake connection. Similarly, I cut some larger portions out of the bottom of the box to allow for hoses for each zone to easily fit in. I mounted two 2x4s inside the box to serve as a sturdy frame for both the box and the pipes.</p>
 <p><img src="images/box-1.png" alt="Same box, but with the connected pipes mounted to the T-shaped 2x4s"></p>
@@ -131,7 +175,7 @@
 <p><img src="images/box-3.png" alt="Box with a hinged lid and latch mounted to the outside - opened so you can see the pipe fittings"></p>
 <p><img src="images/box-4.png" alt="Box mounted to a fence post with some hoses attached"></p>
 <p>All that was remaining was to mount it and do a test under pressure to make sure all the fittings were tight.</p>
-<h3 id="giving-the-system-brains-aka-building-the-circuit">Giving the system brains (AKA building the circuit)</h3>
+<h3 id="giving-the-system-brains-aka-building-the-circuit">Giving the system brains (AKA building the circuit)<a hidden class="anchor" aria-hidden="true" href="#giving-the-system-brains-aka-building-the-circuit">¶</a></h3>
 <p>Having the pipes connected and the box built, all that was remaining was to assemble the circuit to run everything.</p>
 <p>I built a make-shift <a href="https://en.wikipedia.org/wiki/Busbar">busbar</a> <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>, mainly because I realized too late in the process that I&rsquo;d save a lot of time &amp; effort if I just had something to join all the grounds to. Shortly after soldering the grounds, I realized I&rsquo;d have space for combining the positive leads on the same PCB. In the future, I&rsquo;ll go back and apply a more elegant solution that&rsquo;s a bit easier to maintain.</p>
 <p><img src="images/circuit-2.png" alt="Rectangular PCB with soldered terminals and wires connecting the sides"></p>
@@ -160,27 +204,60 @@
 </div>
 
     </div>
-    <div class="post-footer">
-      
-    </div>
   </article>
+  
 
       <footer class="site-footer">
 
       </footer>
     </main>
-    <div id="hidden-stats" style="display: none"></div>
-    <script defer>
-      var t = setInterval(function () {
-        if (window.goatcounter && window.goatcounter.visit_count) {
-          clearInterval(t)
-          window.goatcounter.visit_count({append: '#hidden-stats'})
-          let d = document.getElementById("hidden-stats");
-          let views = parseInt(d.innerHTML);
-          console.log("Total views: ", views);
-        }
-      }, 500)
-    </script>
     
-  </body>
+
+<footer class="footer">
+      <span>
+        &copy;
+        2025
+        <a href="https://www.bobrock.dev/">Standard Output</a>
+      </span><span style="display: inline-block; margin-left: 1em;">
+        <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a>
+    </span>
+    <span style="display: inline-block; margin-left: 1em;">
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">
+            Hugo
+        </a>
+        &
+        <a href="https://github.com/vaga/hugo-theme-m10c" rel="noopener" target="_blank">
+            m10c.
+        </a>
+        <span>
+            Analytics by
+            <a href="https://bobrockdev.goatcounter.com">
+                Goatcounter.
+            </a>
+        </span>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top" class="top-link" id="top-link">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (
+            document.body.scrollTop > 800 ||
+            document.documentElement.scrollTop > 800
+        ) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+</script>
+
+</body>
 </html>

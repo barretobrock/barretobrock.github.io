@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Standard Output</title>
-    <link>http://localhost:1313/categories/</link>
+    <link>https://www.bobrock.dev/categories/</link>
     <description>Recent content in Categories on Standard Output</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 20 Apr 2025 10:35:08 -0500</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.bobrock.dev/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Home-Automation</title>
-      <link>http://localhost:1313/categories/home-automation/</link>
-      <pubDate>Sun, 20 Apr 2025 10:35:08 -0500</pubDate>
-      <guid>http://localhost:1313/categories/home-automation/</guid>
+      <title>General</title>
+      <link>https://www.bobrock.dev/categories/general/</link>
+      <pubDate>Fri, 18 Apr 2025 12:45:50 -0500</pubDate>
+      <guid>https://www.bobrock.dev/categories/general/</guid>
       <description></description>
     </item>
     <item>
-      <title>General</title>
-      <link>http://localhost:1313/categories/general/</link>
-      <pubDate>Fri, 18 Apr 2025 12:45:50 -0500</pubDate>
-      <guid>http://localhost:1313/categories/general/</guid>
+      <title>Home-Automation</title>
+      <link>https://www.bobrock.dev/categories/home-automation/</link>
+      <pubDate>Sun, 09 Jul 2023 13:05:13 -0500</pubDate>
+      <guid>https://www.bobrock.dev/categories/home-automation/</guid>
       <description></description>
     </item>
   </channel>

@@ -14,7 +14,7 @@
         <link rel="stylesheet" href="{{ . }}">
     {{- end }}`
     {{ with .OutputFormats.Get "rss" -}}
-    {{ printf `<link rel=%q type=%q href=%q title=%q>` .Rel .MediaType.Type .Permalink site.Title | safeHTML }}
+      {{ printf `<link rel=%q type=%q href=%q title=%q>` .Rel .MediaType.Type .Permalink site.Title | safeHTML }}
     {{ end }}
 
     <!-- Goatcount -->
@@ -29,7 +29,7 @@
             async src="{{ $goatcount.RelPermalink }}"></script>
 
   </head>
-  <body>
+  <body id="top">
     <header class="app-header">
       <a href="{{ "" | relURL }}"><img class="app-header-avatar" src="{{ .Site.Params.avatar | default "avatar.jpg" | relURL }}" alt="{{ .Site.Params.author.name | default "John Doe" }}" /></a>
       <span class="app-header-title">{{ .Site.Title }}</span>
@@ -73,23 +73,6 @@
 
       </footer>
     </main>
-    <div id="hidden-stats" style="display: none"></div>
-    <script defer>
-      var t = setInterval(function () {
-        if (window.goatcounter && window.goatcounter.visit_count) {
-          clearInterval(t)
-          window.goatcounter.visit_count({append: '#hidden-stats'})
-          let d = document.getElementById("hidden-stats");
-          let views = parseInt(d.innerHTML);
-          console.log("Total views: ", views);
-        }
-      }, 500)
-    </script>
-    {{ if .Store.Get "hasMermaid" }}
-      <script type="module">
-        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
-        mermaid.initialize({ startOnLoad: true });
-      </script>
-    {{ end }}
+    {{ partial "footer.html" . -}}
   </body>
 </html>

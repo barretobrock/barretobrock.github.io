@@ -1,11 +1,16 @@
-+++
-date = '2023-07-09T13:05:13-05:00'
-lastmod = '2025-04-18T13:05:13-05:00'
-draft = false
-title = 'DIY Sprinkler Pt 1'
-tags = ['projects', 'garden']
-categories = ['home-automation']
-+++
+---
+title: 'DIY Sprinkler Pt 1'
+draft: false
+date: 2023-07-09T13:05:13-05:00
+lastmod: 2025-04-18T13:05:13-05:00
+tags: 
+  - garden
+  - projects
+categories: 
+  - home-automation
+series:
+  - diy-sprinkler
+---
 
 ![Circuit](images/circuit-1.png)
 

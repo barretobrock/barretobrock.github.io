@@ -1,0 +1,59 @@
+{{- if not (.Param "hideFooter") }}
+
+<footer class="footer">
+    {{- if site.Copyright }}
+      <span>{{ site.Copyright | markdownify }}</span>
+    {{- else }}
+      <span>
+        &copy;
+        {{ now.Year }}
+        <a href="{{ "" | absURL }}">{{ site.Title }}</a>
+      </span>
+    {{- end -}}
+    <span style="display: inline-block; margin-left: 1em;">
+        <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a>
+    </span>
+    <span style="display: inline-block; margin-left: 1em;">
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">
+            Hugo
+        </a>
+        &
+        <a href="https://github.com/vaga/hugo-theme-m10c" rel="noopener" target="_blank">
+            m10c.
+        </a>
+        {{- if .Site.Params.goatcounter }}
+        <span>
+            Analytics by
+            <a href="https://{{ .Site.Params.goatcounter }}.goatcounter.com">
+                Goatcounter.
+            </a>
+        </span>
+        {{- end }}
+    </span>
+</footer>
+{{- end }}
+
+{{- if (not site.Params.disableScrollToTop) }}
+<a href="#top" aria-label="go to top" title="Go to Top" class="top-link" id="top-link">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (
+            document.body.scrollTop > 800 ||
+            document.documentElement.scrollTop > 800
+        ) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+</script>
+{{- end }}
+

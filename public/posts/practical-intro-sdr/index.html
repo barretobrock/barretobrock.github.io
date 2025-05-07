@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en-us">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head>
     <title>A Practical Intro to SDR and Daemonization // Standard Output</title>
     <link rel="shortcut icon" href="/favicon.ico" />
     <meta charset="utf-8" />
@@ -23,7 +23,7 @@
             async src="/js/count.js"></script>
 
   </head>
-  <body>
+  <body id="top">
     <header class="app-header">
       <a href="/"><img class="app-header-avatar" src="/avatar.png" alt="bobrock" /></a>
       <span class="app-header-title">Standard Output</span>
@@ -64,40 +64,68 @@
   <article class="post">
     <header class="post-header">
       <h1 class ="post-title">A Practical Intro to SDR and Daemonization</h1>
-      <div class="post-meta">
-        <div>
-          <svg class="icon icon-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>calendar</title><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-          <span>Published: </span>
-          Apr 1, 2022
-        </div>
-        
+        <div class="post-meta">
           <div>
             <svg class="icon icon-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>calendar</title><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-            <span>Edited:   </span>
-            Apr 20, 2025
+            <span>Published: </span>
+            Apr 1, 2022
           </div>
-        
-        <div>
-          <svg class="icon icon-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>clock</title><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-          12 min read
+          
+            <div>
+              <svg class="icon icon-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>calendar</title><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+              <span>Edited:   </span>
+              Apr 20, 2025
+            </div>
+          
+          <div>
+            <svg class="icon icon-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>clock</title><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            12 min read
+          </div>
+          <div>
+            <svg class="icon icon-tag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>tag</title><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+                <a class="tag" href="/tags/projects/">Projects</a>
+                <a class="tag" href="/tags/python/">Python</a>
+          </div>
+          <div>
+            <svg class="icon icon-bookmark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>bookmark</title><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+                <a class="tag" href="/categories/home-automation/">Home-Automation</a>
+          </div>
         </div>
-        <div>
-          <svg class="icon icon-tag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>tag</title><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
-              <a class="tag" href="/tags/projects/">Projects</a>
-              <a class="tag" href="/tags/python/">Python</a>
-        </div>
-        <div>
-          <svg class="icon icon-bookmark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>bookmark</title><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
-              <a class="tag" href="/categories/home-automation/">Home-Automation</a>
-        </div>
-      </div>
     </header>
-    <div class="post-content">
-      <p>Software-defined radios (SDR) are an amazing thing. Without turning any knobs or sliding any sliders, you&rsquo;re often able to adjust the radio frequency with just a few commands to the machine that&rsquo;s connected to the device. While typically you can use SDR to not only receive signals, but also transmit, this post will cover just a very basic, but hopefully practical, intro into using SDR.</p>
-<h3 id="why-do-this">Why do this?</h3>
+    <div class="toc">
+    <details  open>
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#why-do-this" aria-label="Why do this?">Why do this?</a></li>
+                <li>
+                    <a href="#goals" aria-label="Goals">Goals</a></li>
+                <li>
+                    <a href="#materials" aria-label="Materials">Materials</a></li>
+                <li>
+                    <a href="#installation" aria-label="Installation">Installation</a></li>
+                <li>
+                    <a href="#creating-the-daemons" aria-label="Creating the daemons">Creating the daemons</a></li>
+                <li>
+                    <a href="#the-power-of-chmod-compels-you---or-daemonizing-your-scripts-with-a-service-file" aria-label="The Power of chmod Compels You - Or, Daemonizing Your Scripts With a Service File">The Power of <code>chmod</code> Compels You - Or, Daemonizing Your Scripts With a Service File</a></li>
+                <li>
+                    <a href="#starting-the-daemons" aria-label="Starting the Daemons">Starting the Daemons</a></li>
+                <li>
+                    <a href="#conclusion" aria-label="Conclusion">Conclusion</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+    <div class="post-content"><p>Software-defined radios (SDR) are an amazing thing. Without turning any knobs or sliding any sliders, you&rsquo;re often able to adjust the radio frequency with just a few commands to the machine that&rsquo;s connected to the device. While typically you can use SDR to not only receive signals, but also transmit, this post will cover just a very basic, but hopefully practical, intro into using SDR.</p>
+<h3 id="why-do-this">Why do this?<a hidden class="anchor" aria-hidden="true" href="#why-do-this">¶</a></h3>
 <p>We have a lot of ways to gather data around the house these days. The data I&rsquo;ve generally been the most interested in for the longest time has been temperature. There are a lot of great temp sensors one can procure for various device systems these days. A lot of companies that are temp data adjacent will even offer sensors that interface with their devices: My HVAC controller offers this, as does many other manufacturers in that realm and the general home automation realm. It&rsquo;s both neat and seemingly relieving to know that there&rsquo;s so many options to choose from.</p>
 <p>And yet, these days you also can&rsquo;t seem to just &ldquo;buy&rdquo; a sensor product without considering the ramifications of the purchase. Some sensors have proprietary technology that renders it unusable outside of that one manufacturer&rsquo;s domain. It can be difficult to purchase an already expensive sensor when you consider that you&rsquo;re going to have to trust that the company won&rsquo;t suddenly go defunct or simply decide they don&rsquo;t support your sensor&rsquo;s model anymore (but you can certainly buy the new model!). Taking this into consideration, I wanted to see how difficult it would be to build out a fairly flexible system of temp sensors.</p>
-<h3 id="goals">Goals</h3>
+<h3 id="goals">Goals<a hidden class="anchor" aria-hidden="true" href="#goals">¶</a></h3>
 <p>For this system to work, I needed to map out some goals to make sure I&rsquo;d select the ideal components for success:</p>
 <ul>
 <li>Relatively cheap temp sensors</li>
@@ -106,10 +134,10 @@
 <li>The SDR should allow for constant use over months</li>
 <li>The SDR should allow access from an automation script that collects the data received</li>
 </ul>
-<h3 id="materials">Materials</h3>
+<h3 id="materials">Materials<a hidden class="anchor" aria-hidden="true" href="#materials">¶</a></h3>
 <p>Considering the above goals, I ended up selecting the <a href="https://www.nooelec.com/store/sdr/nesdr-mini.html">NooElec MiniSDR</a>, which comes as a convenient USB stick. For the temperature sensor, I ended up going with the <a href="https://www.acurite.com/products/indoor-outdoor-temperature-humidity-sensor?variant=41330220335217">AcuRite Model 11112-609TXC</a>, namely because various forum posts suggested that its broadcast frequency at 433MHz was ideal for this kind of project - namely, that signal is quite common for such devices to use, so it&rsquo;s likely I might be able to incorporate other, unrelated devices to the same system.</p>
 <p>In all, getting both the SDR and 2 sensors cost about the same as getting one add-on sensor from my HVAC controller&rsquo;s system, though granted that sensor a) didn&rsquo;t require as much setup and b) probably was better optimized for battery operation. One thing to note, though, was that the sensor also included a fancy occupancy detection feature that I honestly wasn&rsquo;t sure I really even needed :).</p>
-<h3 id="installation">Installation</h3>
+<h3 id="installation">Installation<a hidden class="anchor" aria-hidden="true" href="#installation">¶</a></h3>
 <p>First, I plugged in the SDR to one of my home servers. It&rsquo;s nothing fancy, just a mini pc that&rsquo;s running in &ldquo;headless&rdquo; (i.e., no screens) mode, so I have to access it through another machine that has a screen (typically this is done via SSH).</p>
 <p>Next, I had to install some system-wide software to allow me to interface with the USB SDR. As my server has gone from running Ubuntu to running Arch Linux, the dependencies I needed to install have differed based on the OS used:</p>
 <p><strong>For Ubuntu</strong></p>
@@ -129,7 +157,7 @@
 </span></span><span style="display:flex;"><span>cmake ..
 </span></span><span style="display:flex;"><span>make
 </span></span><span style="display:flex;"><span>make install</span></span></code></pre>
-</figure><h3 id="creating-the-daemons">Creating the daemons</h3>
+</figure><h3 id="creating-the-daemons">Creating the daemons<a hidden class="anchor" aria-hidden="true" href="#creating-the-daemons">¶</a></h3>
 <p>Next, I had to create two daemons: one to stream, one to collect. The streaming one just &rsquo;listens&rsquo; to the SDR and forwards the info so that the collection service can do its thing. The collection service filters through that info and bundles the info it picks up, then saves it at regular intervals.</p>
 <p>If you&rsquo;re new to computing, the term &lsquo;daemon&rsquo; just means we&rsquo;re creating something that is meant to run in the background without us controlling it in any way.</p>
 <blockquote>
@@ -323,7 +351,7 @@
 </ol>
 <p><em>&laquo;takes a deep breath&raquo;</em> That&rsquo;s it!</p>
 <p>Now that we&rsquo;ve written out the scripts, how do we go about actually daemonizing these?</p>
-<h3 id="the-power-of-chmod-compels-you---or-daemonizing-your-scripts-with-a-service-file">The Power of <code>chmod</code> Compels You - Or, Daemonizing Your Scripts With a Service File</h3>
+<h3 id="the-power-of-chmod-compels-you---or-daemonizing-your-scripts-with-a-service-file">The Power of <code>chmod</code> Compels You - Or, Daemonizing Your Scripts With a Service File<a hidden class="anchor" aria-hidden="true" href="#the-power-of-chmod-compels-you---or-daemonizing-your-scripts-with-a-service-file">¶</a></h3>
 <p>Daemonization isn&rsquo;t actually that hard. You just need to create what&rsquo;s essentially a config file, move it to the right spot and then &lsquo;register&rsquo; it with your machine so it knows where &amp; how to run the script associated with the daemon. Note, though, that this isn&rsquo;t the only way to daemonize scripts.</p>
 <p>First off, let&rsquo;s create our &lsquo;config&rsquo; file. Here&rsquo;s a template for ya:</p>
 <figure class="highlight codeblock">
@@ -353,7 +381,7 @@
   <pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sudo systemctl daemon-reload
 </span></span><span style="display:flex;"><span>sudo systemctl <span style="color:#b58900">enable</span> /lib/systemd/system/example_rf_collect.service</span></span></code></pre>
 </figure><p>Repeat the above sequence for the other service file and then we&rsquo;re ready to move on!</p>
-<h3 id="starting-the-daemons">Starting the Daemons</h3>
+<h3 id="starting-the-daemons">Starting the Daemons<a hidden class="anchor" aria-hidden="true" href="#starting-the-daemons">¶</a></h3>
 <p>Once we&rsquo;re ready, we just start the daemons by referring to only their file name (since they&rsquo;re now registered).</p>
 <figure class="highlight codeblock">
   <pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sudo systemctl start example_rf_collect.service</span></span></code></pre>
@@ -374,7 +402,7 @@
 <p>Last, you can also run the script itself (from <code>ExecStart</code>) in your own terminal to make sure it&rsquo;s functioning properly if you have any issues with the service not starting properly:</p>
 <figure class="highlight codeblock">
   <pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>/path/to/your/venv/bin/python3 /path/to/your/project/collect/rf_collect.py</span></span></code></pre>
-</figure><h3 id="conclusion">Conclusion</h3>
+</figure><h3 id="conclusion">Conclusion<a hidden class="anchor" aria-hidden="true" href="#conclusion">¶</a></h3>
 <p>So this is just one way of how to build your own sensor network without having to buy in to a single manufacturer&rsquo;s realm of devices.</p>
 <p>After running this script for a few days, I noticed a lot of nearby, unknown devices that my radio was also picking up:</p>
 <ul>
@@ -386,27 +414,60 @@
 <p>Here&rsquo;s hoping my documentation of this is found helpful by someone. If you spot any errors in my above attempts at communicating any concept, feel free to reach out! I&rsquo;d be happy to correct my details.</p>
 
     </div>
-    <div class="post-footer">
-      
-    </div>
   </article>
+  
 
       <footer class="site-footer">
 
       </footer>
     </main>
-    <div id="hidden-stats" style="display: none"></div>
-    <script defer>
-      var t = setInterval(function () {
-        if (window.goatcounter && window.goatcounter.visit_count) {
-          clearInterval(t)
-          window.goatcounter.visit_count({append: '#hidden-stats'})
-          let d = document.getElementById("hidden-stats");
-          let views = parseInt(d.innerHTML);
-          console.log("Total views: ", views);
-        }
-      }, 500)
-    </script>
     
-  </body>
+
+<footer class="footer">
+      <span>
+        &copy;
+        2025
+        <a href="https://www.bobrock.dev/">Standard Output</a>
+      </span><span style="display: inline-block; margin-left: 1em;">
+        <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a>
+    </span>
+    <span style="display: inline-block; margin-left: 1em;">
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">
+            Hugo
+        </a>
+        &
+        <a href="https://github.com/vaga/hugo-theme-m10c" rel="noopener" target="_blank">
+            m10c.
+        </a>
+        <span>
+            Analytics by
+            <a href="https://bobrockdev.goatcounter.com">
+                Goatcounter.
+            </a>
+        </span>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top" class="top-link" id="top-link">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (
+            document.body.scrollTop > 800 ||
+            document.documentElement.scrollTop > 800
+        ) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+</script>
+
+</body>
 </html>

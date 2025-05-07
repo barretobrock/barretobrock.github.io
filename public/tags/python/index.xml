@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Python on Standard Output</title>
-    <link>http://localhost:1313/tags/python/</link>
+    <link>https://www.bobrock.dev/tags/python/</link>
     <description>Recent content in Python on Standard Output</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 20 Apr 2025 10:35:08 -0500</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/python/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Automating Water Meter Reads in the Laziest Way</title>
-      <link>http://localhost:1313/posts/water-meter-reading-automation/</link>
-      <pubDate>Sun, 20 Apr 2025 10:35:08 -0500</pubDate>
-      <guid>http://localhost:1313/posts/water-meter-reading-automation/</guid>
-      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;This post is a recollection of a project that took place about 13 years ago, so details might be hazy and the actual implementation might be either easier or more involved, depending on the tech used.&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;h3 id=&#34;preamble&#34;&gt;Preamble&lt;/h3&gt;&#xA;&lt;p&gt;Back in the day, my apartment had hot &amp;amp; cold water meters mounted above the ceiling of my bathroom that served as the water meters for the whole place. The ceiling had these tiles you&amp;rsquo;d remove&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; in order to access the area where the meters were stored, so it wasn&amp;rsquo;t like the meters were immediately visible when you step into the bathroom. It was my task, at the beginning of every month, to grab a chair, lift up one of the ceiling tiles, and record the numbers on the water meters to then send it to the building&amp;rsquo;s maintenance team who also handled billing for utilities. This was a few years before the maintenance team swapped out these manual meters for the more convenient ones that transmitted their data wirelessly to a nearby device, so there was no going around the manual inspection of the gauges.&lt;/p&gt;</description>
-    </item>
+    <atom:link href="https://www.bobrock.dev/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>A Practical Intro to SDR and Daemonization</title>
-      <link>http://localhost:1313/posts/practical-intro-sdr/</link>
+      <link>https://www.bobrock.dev/posts/practical-intro-sdr/</link>
       <pubDate>Fri, 01 Apr 2022 00:00:00 -0500</pubDate>
-      <guid>http://localhost:1313/posts/practical-intro-sdr/</guid>
+      <guid>https://www.bobrock.dev/posts/practical-intro-sdr/</guid>
       <description>&lt;p&gt;Software-defined radios (SDR) are an amazing thing. Without turning any knobs or sliding any sliders, you&amp;rsquo;re often able to adjust the radio frequency with just a few commands to the machine that&amp;rsquo;s connected to the device. While typically you can use SDR to not only receive signals, but also transmit, this post will cover just a very basic, but hopefully practical, intro into using SDR.&lt;/p&gt;&#xA;&lt;h3 id=&#34;why-do-this&#34;&gt;Why do this?&lt;/h3&gt;&#xA;&lt;p&gt;We have a lot of ways to gather data around the house these days. The data I&amp;rsquo;ve generally been the most interested in for the longest time has been temperature. There are a lot of great temp sensors one can procure for various device systems these days. A lot of companies that are temp data adjacent will even offer sensors that interface with their devices: My HVAC controller offers this, as does many other manufacturers in that realm and the general home automation realm. It&amp;rsquo;s both neat and seemingly relieving to know that there&amp;rsquo;s so many options to choose from.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Automating Water Meter Reads in the Laziest Way</title>
+      <link>https://www.bobrock.dev/posts/water-meter-reading-automation/</link>
+      <pubDate>Mon, 15 Feb 2021 10:35:08 -0500</pubDate>
+      <guid>https://www.bobrock.dev/posts/water-meter-reading-automation/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;This post is a recollection of a project that took place about 13 years ago, so details might be hazy and the actual implementation might be either easier or more involved, depending on the tech used.&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;h3 id=&#34;preamble&#34;&gt;Preamble&lt;/h3&gt;&#xA;&lt;p&gt;Back in the day, my apartment had hot &amp;amp; cold water meters mounted above the ceiling of my bathroom that served as the water meters for the whole place. The ceiling had these tiles you&amp;rsquo;d remove&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; in order to access the area where the meters were stored, so it wasn&amp;rsquo;t like the meters were immediately visible when you step into the bathroom. It was my task, at the beginning of every month, to grab a chair, lift up one of the ceiling tiles, and record the numbers on the water meters to then send it to the building&amp;rsquo;s maintenance team who also handled billing for utilities. This was a few years before the maintenance team swapped out these manual meters for the more convenient ones that transmitted their data wirelessly to a nearby device, so there was no going around the manual inspection of the gauges.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
