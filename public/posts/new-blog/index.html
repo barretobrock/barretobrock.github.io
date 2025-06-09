@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en-us">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head>
     <title>Getting the Blog Back Together // Standard Output</title>
     <link rel="shortcut icon" href="/favicon.ico" />
     <meta charset="utf-8" />
@@ -78,22 +78,18 @@
             </span>
             
               <span class="meta-item">
-                <svg class="icon icon-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>eye</title><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg><span id="4156f043fbcba7c13db0a5bedfffc3cf" title="Views"></span>
+                <svg class="icon icon-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>eye</title><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg><span id="4156f043fbcba7c13db0a5bedfffc3cf" class="meta-item-desc" title="Views"></span>
 <script>
-    var r = new XMLHttpRequest();
-    let cnt = 0;
-    r.addEventListener('load', function() {
-      
-      console.log("Number of counts: ", cnt);
-        document.getElementById('4156f043fbcba7c13db0a5bedfffc3cf').innerText =  + ' views'
+    window.addEventListener('load', function () {
+        let randcnt = Math.floor(Math.random() * 100) + 1;
+        document.getElementById('4156f043fbcba7c13db0a5bedfffc3cf').innerText = randcnt + ' views';
     })
-    try {
-      r.open('GET', "https://bobrockdev.goatcounter.com/counter/" + encodeURIComponent("/posts/new-blog/".replace(/(\/)?$/, '')) + '.json')
-      r.send()
-    } catch (e) {
-      console.log("oopsie!")
-
-    }
+    var r = new XMLHttpRequest();
+    r.addEventListener('load', function() {
+        document.getElementById('4156f043fbcba7c13db0a5bedfffc3cf').innerText = JSON.parse(this.responseText).count_unique + ' views'
+    })
+    r.open('GET', "https://bobrockdev.goatcounter.com/counter/" + encodeURIComponent("/posts/new-blog/".replace(/(\/)?$/, '')) + '.json')
+    r.send()
 </script></span>
             
           </div>
@@ -107,10 +103,6 @@
                     <a class="tag" href="/categories/general/">General</a>
               </span>
           </div>
-
-
-
-
         </div>
     </header>
     
@@ -132,7 +124,7 @@
       <span>
         &copy;
         2025
-        <a href="http://localhost:1313/">Standard Output</a>
+        <a href="https://www.bobrock.dev/">Standard Output</a>
       </span><span style="display: inline-block; margin-left: 1em;">
         <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a>
     </span>

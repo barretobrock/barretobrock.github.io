@@ -2,17 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Diy-Sprinkler on Standard Output</title>
-    <link>http://localhost:1313/series/diy-sprinkler/</link>
+    <link>https://www.bobrock.dev/series/diy-sprinkler/</link>
     <description>Recent content in Diy-Sprinkler on Standard Output</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 18 Apr 2025 13:05:13 -0500</lastBuildDate>
-    <atom:link href="http://localhost:1313/series/diy-sprinkler/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 09 Jun 2025 16:05:37 -0500</lastBuildDate>
+    <atom:link href="https://www.bobrock.dev/series/diy-sprinkler/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DIY Sprinkler Pt 2: The H-Bridge</title>
+      <link>https://www.bobrock.dev/posts/diy-sprinkler-pt-2/</link>
+      <pubDate>Tue, 01 Aug 2023 13:05:13 -0500</pubDate>
+      <guid>https://www.bobrock.dev/posts/diy-sprinkler-pt-2/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;images/hbridge.png&#34; alt=&#34;H-bridge&#34;&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;the-next-iteration-in-motor-control&#34;&gt;The next iteration in motor control&lt;/h3&gt;&#xA;&lt;p&gt;It&amp;rsquo;s always interesting to watch the evolution of projects like these from initial development to something a bit more polished, maybe a bit more stable as well. Initial development is often a rough working concept. Depending on the situation and time investment, maybe that rough working concept is good enough to live with. Other times, maybe something more elegant is desired.&lt;/p&gt;&#xA;&lt;p&gt;In the case of this project, I knew the initial rough design was temporary, but I wasn&amp;rsquo;t yet aware of possible solutions outside of just creating a customized circuit to handle my needs. Luckily I have a friend who was immediately more aware of the electronic components out there. I mentioned to him my current configuration and he almost immediately suggested using this marvelous device. Anyway, I&amp;rsquo;m getting ahead of myself. Let&amp;rsquo;s take a look at what I had initially.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>DIY Sprinkler Pt 1</title>
-      <link>http://localhost:1313/posts/diy-sprinkler-pt-1/</link>
+      <link>https://www.bobrock.dev/posts/diy-sprinkler-pt-1/</link>
       <pubDate>Sun, 09 Jul 2023 13:05:13 -0500</pubDate>
-      <guid>http://localhost:1313/posts/diy-sprinkler-pt-1/</guid>
+      <guid>https://www.bobrock.dev/posts/diy-sprinkler-pt-1/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;images/circuit-1.png&#34; alt=&#34;Circuit&#34;&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;motivation-for-this-project&#34;&gt;Motivation for this project&lt;/h3&gt;&#xA;&lt;p&gt;Shortly after moving in to my current place, I reasoned that I needed an irrigation system to coordinate the occasional drip irrigation to my (mostly native) plants. In this part of Texas, droughts aren&amp;rsquo;t really uncommon, unfortunately, so having this system set up would help provide some stability to the plants while not being much of a strain on my personal bandwidth to water the lawn, as well as the local water district&amp;rsquo;s. Perhaps it goes without saying, but precisely applying water to plants where &amp;amp; when they need it instead of just spraying in their general direction goes a long way towards helping to conserve water while also keeping plants happy.&lt;/p&gt;</description>
     </item>
   </channel>
